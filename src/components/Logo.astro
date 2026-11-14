@@ -1,0 +1,26 @@
+---
+// The Stride Social logo the owner supplied (2026-11-06), used as a mask so it takes the colour of the text
+// around it: navy on ice, white on navy. Size it by height.
+export interface Props {
+  /** Read out by screen readers. */
+  brand: string;
+  class?: string;
+}
+
+const { brand, class: className } = Astro.props;
+---
+
+<span class:list={['logo', className]} role="img" aria-label={brand}></span>
+
+<style>
+  .logo {
+    display: block;
+    height: 40px;
+    aspect-ratio: 381 / 140;
+    background: currentColor;
+    -webkit-mask: url('/stride-social-logo.png') center / contain no-repeat;
+    mask: url('/stride-social-logo.png') center / contain no-repeat;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+</style>

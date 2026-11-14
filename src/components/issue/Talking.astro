@@ -1,0 +1,89 @@
+---
+import SectionHead from '@/components/SectionHead.astro';
+import type { IssueData } from '@/lib/issues';
+
+export interface Props {
+  data: IssueData;
+}
+
+const { talking } = Astro.props.data;
+---
+
+<section id="talking" class="section" data-tone="social" data-look="deep">
+  <div class="container">
+    <SectionHead kicker={talking.kicker} headline={talking.headline} lead={talking.lead} />
+
+    <ul class="questions" role="list">
+      {talking.questions.map((q, i) => (
+        <li class="question" data-reveal="rise" style={`--reveal-delay: ${i * 60}ms`}>
+          <p class="question__text type-serif">{q.text}</p>
+          {q.link && <a class="out-link question__link" href={q.link.url} target="_blank" rel="noopener noreferrer">{q.link.label} ↗</a>}
+        </li>
+      ))}
+    </ul>
+
+    <div class="turn" data-reveal="rise">
+      <h3 class="item-title turn__title">{talking.turn.title}</h3>
+      <div>
+        <p class="turn__body">{talking.turn.body}</p>
+        <p class="turn__care">{talking.care}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .questions {
+    margin-top: clamp(48px, 7vw, 96px);
+  }
+
+  .question {
+    display: grid;
+    justify-items: start;
+    gap: var(--space-2);
+    padding-block: var(--space-5);
+    border-top: 1px solid rgb(var(--hair) / 0.24);
+  }
+
+  .question__text {
+    max-width: 26ch;
+    font-size: clamp(2.125rem, 4.8vw, 4.5rem);
+    line-height: 1.05;
+    color: rgb(var(--tone-lit));
+  }
+
+  .question__link {
+    font-size: var(--type-small);
+  }
+
+  .turn {
+    display: grid;
+    gap: var(--space-4);
+    margin-top: var(--space-7);
+    padding-top: var(--space-5);
+    border-top: 1px solid rgb(var(--hair) / 0.24);
+  }
+
+  .turn__title {
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+  }
+
+  .turn__body {
+    max-width: 44ch;
+    font-size: var(--type-lead);
+    line-height: 1.4;
+  }
+
+  .turn__care {
+    max-width: 48ch;
+    margin-top: var(--space-4);
+    color: rgb(var(--ink) / 0.84);
+  }
+
+  @media (min-width: 1024px) {
+    .turn {
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 34rem);
+      gap: var(--space-8);
+    }
+  }
+</style>

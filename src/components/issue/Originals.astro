@@ -1,0 +1,112 @@
+---
+// The fine print, kept short and quiet at the end, plus where to keep a copy.
+import SectionHead from '@/components/SectionHead.astro';
+import type { IssueData, Labels } from '@/lib/issues';
+
+export interface Props {
+  data: IssueData;
+  t: Labels;
+}
+
+const { data, t } = Astro.props;
+const { originals } = data;
+---
+
+<section id="originals" class="section" data-tone="social" data-look="pale">
+  <div class="container">
+    <SectionHead kicker={originals.kicker} headline={originals.headline} />
+
+    <ul class="notes" role="list">
+      {originals.notes.map((n) => <li>{n}</li>)}
+    </ul>
+
+    <div class="groups">
+      {originals.groups.map((g) => (
+        <details class="group">
+          <summary class="group__summary">
+            <span>{g.title}</span>
+            <span class="group__plus" aria-hidden="true"></span>
+          </summary>
+          <ul class="group__links" role="list">
+            {g.links.map((l) => (
+              <li><a class="out-link" href={l.url} target="_blank" rel="noopener noreferrer">{l.label} ↗</a></li>
+            ))}
+          </ul>
+        </details>
+      ))}
+    </div>
+
+    <button class="exp-pill exp-pill--ghost keep" type="button" data-print data-no-print>{t.originals.pdf}</button>
+  </div>
+</section>
+
+<style>
+  .notes {
+    display: grid;
+    gap: var(--space-2);
+    max-width: 62ch;
+    margin-top: var(--space-6);
+  }
+
+  .groups {
+    margin-top: var(--space-6);
+    border-bottom: 1px solid rgb(var(--hair) / 0.24);
+  }
+
+  .group {
+    border-top: 1px solid rgb(var(--hair) / 0.24);
+  }
+
+  .group__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    min-height: 44px;
+    padding-block: var(--space-4);
+    font-weight: 600;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .group__summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .group__plus {
+    position: relative;
+    flex: none;
+    width: 18px;
+    height: 18px;
+    transition: rotate 400ms var(--ease-out);
+  }
+
+  .group__plus::before,
+  .group__plus::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: currentColor;
+  }
+
+  .group__plus::after {
+    rotate: 90deg;
+  }
+
+  .group[open] .group__plus {
+    rotate: 45deg;
+  }
+
+  .group__links {
+    display: grid;
+    gap: var(--space-2);
+    padding-bottom: var(--space-5);
+  }
+
+  .keep {
+    margin-top: var(--space-6);
+  }
+</style>

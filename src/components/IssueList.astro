@@ -1,0 +1,59 @@
+---
+// A list of issues, one row each: topic, then number and dates. Used for "Past issues" on the home page and for each
+// month in the archive. An issue for a different audience than usual says who it's for. The styles are the original
+// home page's "Past issues" styles, moved here unchanged so both pages share them.
+import { audienceOf, issueDates, issueNo, issuePath, topicId, type Issue, type Settings } from '@/lib/issues';
+
+export interface Props {
+  issues: Issue[];
+  settings: Settings;
+}
+
+const { issues, settings } = Astro.props;
+---
+
+<ul class="issues" role="list">
+  {issues.map((issue) => {
+    const audience = audienceOf(settings, issue.data);
+    return (
+      <li class="past__item" data-topic={topicId(issue.data.topic)}>
+        <a class="past__link" href={issuePath(issue)}>
+          <span class="item-title past__topic">{issue.data.topic}</span>
+          <span class="past__when">
+            Issue {issueNo(issue.data)} · {issueDates(issue.data)}
+            {audience !== settings.audience && <><br />{audience}</>}
+          </span>
+        </a>
+      </li>
+    );
+  })}
+</ul>
+
+<style>
+  .past__item {
+    border-top: 1px solid rgb(var(--hair) / 0.24);
+  }
+
+  .past__link {
+    display: grid;
+    gap: var(--space-1);
+    padding-block: var(--space-5);
+  }
+
+  .past__topic {
+    font-size: clamp(1.5rem, 3vw, 2.75rem);
+  }
+
+  .past__when {
+    font-size: var(--type-small);
+    color: rgb(var(--ink) / 0.76);
+  }
+
+  @media (min-width: 1024px) {
+    .past__link {
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: var(--space-5);
+    }
+  }
+</style>

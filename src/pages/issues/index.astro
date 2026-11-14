@@ -1,0 +1,86 @@
+---
+// The archive: every issue, newest first, grouped by the month its week ended. With more than one topic, chips at
+// the top narrow the list to one topic (scripts/archive.ts); without scripts, everything simply shows.
+import IssueList from '@/components/IssueList.astro';
+import SectionHead from '@/components/SectionHead.astro';
+import Layout from '@/layouts/Layout.astro';
+import { fill, getIssues, getSettings, issueMonth, labelsFor, topicId, type Issue } from '@/lib/issues';
+
+const issues = await getIssues();
+const settings = await getSettings();
+const t = labelsFor(settings);
+
+const months: { label: string; issues: Issue[] }[] = [];
+for (const issue of issues) {
+  const label = issueMonth(issue.data);
+  const last = months.at(-1);
+  if (last?.label === label) last.issues.push(issue);
+  else months.push({ label, issues: [issue] });
+}
+
+// One chip per topic, in order of the newest issue on it.
+const topics = [...new Map(issues.map((i) => [topicId(i.data.topic), i.data.topic])).entries()].map(([id, label]) => ({
+  id,
+  label,
+  count: issues.filter((i) => topicId(i.data.topic) === id).length,
+}));
+---
+
+<Layout
+  title={`${t.archive.title} · ${settings.reportName} · ${settings.department}`}
+  brand={settings.brand}
+  footerNote={`${settings.audience}. ${settings.keepPrivate}`}
+>
+  <section class="section archive" data-tone="social" data-look="ice" data-archive>
+    <div class="container">
+      <SectionHead
+        kicker={t.archive.kicker}
+        headline={t.archive.headline}
+        lead={issues.length === 1 ? t.archive.oneLead : fill(t.archive.lead, { count: issues.length })}
+      />
+
+      {topics.length > 1 && (
+        <div class="archive__tools" role="group" aria-label={t.archive.filterBy} data-no-print>
+          <button class="exp-chip" type="button" data-topic-filter="all" aria-pressed="true">{t.archive.all} ({issues.length})</button>
+          {topics.map((topic) => (
+            <button class="exp-chip" type="button" data-topic-filter={topic.id} aria-pressed="false">{topic.label} ({topic.count})</button>
+          ))}
+        </div>
+      )}
+
+      {months.map((m) => (
+        <div class="archive__month" data-archive-month>
+          <h2 class="soft-label archive__when">{m.label}</h2>
+          <IssueList issues={m.issues} settings={settings} />
+        </div>
+      ))}
+
+      <p class="visually-hidden" data-archive-count role="status"></p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .archive__tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: clamp(40px, 6vw, 72px);
+  }
+
+  .archive__month {
+    margin-top: clamp(40px, 6vw, 72px);
+  }
+
+  .archive__tools + .archive__month {
+    margin-top: var(--space-7);
+  }
+
+  .archive__when {
+    padding-bottom: var(--space-3);
+  }
+
+  .archive__month[hidden] {
+    display: none;
+  }
+</style>

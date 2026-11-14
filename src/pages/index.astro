@@ -1,0 +1,117 @@
+---
+// The private home: this week's issue, then the most recent earlier ones and a link to the archive. A new YAML file
+// in src/content/issues/ appears here by itself.
+import Headline from '@/components/Headline.astro';
+import IssueList from '@/components/IssueList.astro';
+import Layout from '@/layouts/Layout.astro';
+import { fill, getIssues, getSettings, issueDates, issueNo, issuePath, labelsFor, withBase } from '@/lib/issues';
+
+/** How many earlier issues the home page lists before pointing to the archive. */
+const RECENT = 6;
+
+const [latest, ...past] = await getIssues();
+const settings = await getSettings();
+const t = labelsFor(settings);
+---
+
+<Layout title={`${settings.reportName} · ${settings.department}`} brand={settings.brand} footerNote={`${settings.audience}. ${settings.keepPrivate}`}>
+  <section class="door" data-tone="social" data-look="ice">
+    <div class="container door__in">
+      <div>
+        <p class="soft-label">{settings.reportName} · {settings.audience}</p>
+        {latest && <Headline lines={latest.data.headline} as="h1" class="door__title" />}
+        <p class="door__lede">{latest?.data.homeLine ?? settings.homeLine}</p>
+      </div>
+
+      {latest && (
+        <a class="latest" href={issuePath(latest)} data-reveal="rise" style="--reveal-delay: 300ms">
+          <span class="latest__topic type-serif">{latest.data.topic}</span>
+          <span class="latest__when">Issue {issueNo(latest.data)} · {issueDates(latest.data)}</span>
+          <span class="exp-pill latest__go">
+            {t.home.readLatest}
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"></path></svg>
+          </span>
+        </a>
+      )}
+    </div>
+  </section>
+
+  {past.length > 0 && (
+    <section class="section past" data-tone="social" data-look="pale">
+      <div class="container">
+        <p class="soft-label past__head">{t.home.past}</p>
+        <IssueList issues={past.slice(0, RECENT)} settings={settings} />
+        <a class="exp-pill exp-pill--ghost past__all" href={withBase('/issues/')}>{fill(t.home.seeAll, { count: past.length + 1 })}</a>
+      </div>
+    </section>
+  )}
+</Layout>
+
+<style>
+  .door__in {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-7);
+    min-height: calc(100svh - var(--header-h));
+    padding-block: var(--space-5) var(--space-7);
+  }
+
+  .door__title {
+    margin-top: var(--space-5);
+    font-size: 11.2vw;
+    line-height: 0.94;
+  }
+
+  .door__lede {
+    max-width: 34ch;
+    margin-top: var(--space-5);
+    font-size: var(--type-lead);
+    line-height: 1.35;
+  }
+
+  .latest {
+    display: grid;
+    justify-items: start;
+    gap: var(--space-2);
+    padding-top: var(--space-4);
+    border-top: 1px solid rgb(var(--hair) / 0.24);
+  }
+
+  .latest__topic {
+    font-size: clamp(2.75rem, 6.4vw, 6rem);
+    line-height: 1;
+    color: rgb(var(--tone-lit));
+    transition: translate 500ms var(--ease-out);
+  }
+
+  .latest__when {
+    color: rgb(var(--ink) / 0.8);
+  }
+
+  .latest__go {
+    margin-top: var(--space-3);
+  }
+
+  .latest:hover .latest__topic {
+    translate: 14px 0;
+  }
+
+  .latest:hover .latest__go {
+    background: rgb(var(--press-hover));
+  }
+
+  .past__head {
+    padding-bottom: var(--space-3);
+  }
+
+  .past__all {
+    margin-top: var(--space-6);
+  }
+
+  @media (min-width: 1024px) {
+    .door__title {
+      font-size: clamp(4.5rem, 7.6vw, 8.5rem);
+    }
+  }
+</style>

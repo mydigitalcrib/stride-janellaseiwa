@@ -1,0 +1,164 @@
+/*
+ * Stride Social's design tokens, copied from the Stride website (src/styles/system/tokens.css).
+ * This site has no link to that project, so a change there has to be copied here by hand.
+ * Left out: the other divisions' colours, and the wide desktop margin that clears the website's radial menu.
+ */
+:root {
+  /* Stride's palette (lime is left out: it belongs to Talent's buttons on the website, and this site wears Social's colours). */
+  --navy-900: #06142b;
+  --navy-700: #0c2753;
+  --navy-500: #294368;
+  --steel: #7892ab;
+  --ice: #cfedf8;
+  --ice-pale: #e9fafd;
+  --frost: #f5fcff;
+  --white: #ffffff;
+
+  /* Type families */
+  --font-display: 'Archivo Variable', 'Archivo', 'Arial Narrow', system-ui, sans-serif;
+  --font-text: 'Inter Variable', 'Inter', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+
+  /* Type scale (fluid, mobile to desktop) */
+  --type-display: clamp(2.75rem, 7vw, 7rem);
+  --type-h2: clamp(1.75rem, 3vw, 3rem);
+  --type-h3: clamp(1.25rem, 1.8vw, 1.75rem);
+  --type-lead: clamp(1.25rem, 1.5vw, 1.5rem);
+  --type-body: 1.125rem;
+  --type-small: 0.9375rem;
+
+  /* Display width settings (Archivo wdth axis) */
+  --stretch-wide: 125%;
+
+  /* Space (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+  --section-pad: clamp(64px, 10vw, 160px);
+
+  /* Layout */
+  --margin: clamp(16px, 4vw, 64px);
+  --gutter: 24px;
+  --container: 1440px;
+  --header-h: 72px;
+
+  /* Motion */
+  --dur-reveal: 700ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter: 16px;
+    --header-h: 64px;
+  }
+}
+
+/* Small phones: display type scales with the viewport and narrows slightly so long words fit down to 320px. */
+@media (max-width: 479px) {
+  :root {
+    --type-display: 11vw;
+    --stretch-wide: 112%;
+  }
+}
+
+/* ---------- Social's accents, as RGB triples ---------- */
+[data-division='social'],
+[data-tone='social'] {
+  --lit-dark: 207 237 248;
+  --on-dark: 6 20 43;
+  --glow-dark: 207 237 248;
+  --hover-dark: 255 255 255;
+  --lit-light: 12 39 83;
+  --on-light: 207 237 248;
+  --hover-light: 41 67 104;
+  --tone-wash: 207 237 248;
+  --tone-depth: 41 67 104;
+}
+
+/* ---------- The colours a section can live in ([data-look]) ---------- */
+:root,
+[data-look='deep'] {
+  --tone-surface: 6 20 43;
+}
+
+[data-look='navy'] {
+  --tone-surface: 12 39 83;
+}
+
+[data-look='ice'] {
+  --tone-surface: 207 237 248;
+  --tone-wash: 255 255 255;
+  --tone-depth: 245 252 255;
+}
+
+[data-look='pale'] {
+  --tone-surface: 233 250 253;
+  --tone-wash: 255 255 255;
+  --tone-depth: 207 237 248;
+}
+
+[data-look='frost'] {
+  --tone-surface: 245 252 255;
+  --tone-wash: 207 237 248;
+  --tone-depth: 233 250 253;
+}
+
+/* ---------- The ink: what everything on the background is drawn in ----------
+   One background means one ink: scripts/backdrop.ts turns html[data-ink] where white and navy read equally
+   well. .on-photo keeps the dark set whatever the background. */
+:root,
+.on-photo {
+  --ink: 255 255 255;
+  --hair: 255 255 255;
+  --fill-k: 1;
+  --shade: 0 0 0;
+}
+
+html[data-ink='light'] {
+  --ink: 6 20 43;
+  --hair: 12 39 83;
+  --fill-k: 3;
+  --shade: 41 67 104;
+}
+
+:root,
+[data-tone],
+[data-division],
+.on-photo {
+  --tone-lit: var(--lit-dark);
+  --tone-on: var(--on-dark);
+  --tone-hover: var(--hover-dark);
+}
+
+html[data-ink='light'],
+html[data-ink='light'] [data-tone],
+html[data-ink='light'] [data-division] {
+  --tone-lit: var(--lit-light);
+  --tone-on: var(--on-light);
+  --tone-hover: var(--hover-light);
+}
+
+html[data-ink='light'] .on-photo {
+  --tone-lit: var(--lit-dark);
+  --tone-on: var(--on-dark);
+  --tone-hover: var(--hover-dark);
+}
+
+/* ---------- Buttons: on this site they follow Social's accent ---------- */
+:root,
+[data-tone],
+[data-division],
+.on-photo {
+  --press: var(--tone-lit);
+  --press-on: var(--tone-on);
+  --press-hover: var(--tone-hover);
+}

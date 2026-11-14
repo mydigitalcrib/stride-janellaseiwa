@@ -1,0 +1,8 @@
+# Google and Bing may fetch pages only so they can read "noindex" and drop them if the link ever leaks.
+User-agent: Googlebot
+User-agent: Bingbot
+Allow: /
+
+# Everything else (archives, scrapers, AI crawlers) is told to stay out.
+User-agent: *
+Disallow: /

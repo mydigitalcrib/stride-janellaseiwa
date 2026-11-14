@@ -1,0 +1,126 @@
+---
+// The issue's first screen, like a magazine cover: the week's line first, the series name small. The headline
+// sets itself, then the interruption arrives from the side, which is the issue's own format as the first move.
+import Headline from '@/components/Headline.astro';
+import { issueDates, issueNo, type IssueData, type Labels } from '@/lib/issues';
+
+export interface Props {
+  data: IssueData;
+  t: Labels;
+  reportName: string;
+  audience: string;
+}
+
+const { data, t, reportName, audience } = Astro.props;
+---
+
+<section class="cover" data-tone="social" data-look="ice">
+  <div class="container cover__in">
+    <div>
+      {data.draft && <p class="cover__notice soft-label">{t.cover.draft}</p>}
+      {!data.figuresChecked && <p class="cover__notice soft-label">{t.cover.figuresUnchecked}</p>}
+      <p class="soft-label">{reportName} · {data.topic}</p>
+      <Headline lines={data.headline} as="h1" class="cover__title" />
+    </div>
+
+    <div class="cover__mom" data-reveal="from-right" style="--reveal-delay: 450ms">
+      <p class="cover__quote type-serif">{data.cover.quote}</p>
+      <p class="cover__line">{data.cover.line}</p>
+    </div>
+
+    <div class="cover__foot">
+      <p class="cover__lede">{data.lede}</p>
+      <p class="cover__facts">Issue {issueNo(data)} · {issueDates(data)}<br />{audience}</p>
+      <a class="exp-round" href="#week" aria-label="Start reading" data-no-print>
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M3 9l5 5 5-5"></path></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cover__in {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-7);
+    min-height: calc(100svh - var(--header-h));
+    padding-block: var(--space-5) var(--space-7);
+  }
+
+  .cover__notice {
+    display: inline-block;
+    margin-bottom: var(--space-4);
+    padding: var(--space-2) var(--space-4);
+    border-radius: 999px;
+    box-shadow: inset 0 0 0 1px rgb(var(--hair) / 0.4);
+  }
+
+  .cover__title {
+    margin-top: var(--space-5);
+    font-size: 11.2vw;
+    line-height: 0.94;
+  }
+
+  .cover__mom {
+    display: grid;
+    justify-items: end;
+    gap: var(--space-2);
+    text-align: right;
+    rotate: -4deg;
+    transform-origin: 100% 50%;
+  }
+
+  .cover__quote {
+    font-size: clamp(6rem, 30vw, 15rem);
+    line-height: 0.8;
+    color: rgb(var(--tone-lit));
+  }
+
+  .cover__line {
+    max-width: 24ch;
+    font-size: var(--type-lead);
+    line-height: 1.25;
+  }
+
+  .cover__foot {
+    display: grid;
+    gap: var(--space-5);
+    margin-top: auto;
+  }
+
+  .cover__lede {
+    max-width: 38ch;
+    font-size: var(--type-lead);
+    line-height: 1.4;
+  }
+
+  .cover__facts {
+    font-size: var(--type-small);
+    line-height: 1.5;
+    color: rgb(var(--ink) / 0.76);
+  }
+
+  @media (min-width: 1024px) {
+    .cover__title {
+      font-size: clamp(4.5rem, 7.6vw, 8.5rem);
+    }
+
+    .cover__mom {
+      position: absolute;
+      top: 46%;
+      right: var(--margin);
+      z-index: 1;
+    }
+
+    .cover__quote {
+      font-size: clamp(7rem, 11vw, 12rem);
+    }
+
+    .cover__foot {
+      grid-template-columns: minmax(0, 1fr) auto auto;
+      align-items: end;
+      gap: var(--space-8);
+    }
+  }
+</style>

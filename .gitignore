@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.astro/
+.test-output/
+.DS_Store
+Thumbs.db
+*.log
+
+# Credentials never belong in this repo. This site needs none, so anything like these is a mistake.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc

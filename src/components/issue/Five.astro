@@ -1,0 +1,247 @@
+---
+// Five things to try. Each shows its one-line "make it yours" straight away, so the list is useful without opening
+// anything; tap for the why, the hook and more ways in. The first starts open.
+import SectionHead from '@/components/SectionHead.astro';
+import { thingBrief, type IssueData, type Labels } from '@/lib/issues';
+
+export interface Props {
+  data: IssueData;
+  t: Labels;
+}
+
+const { data, t } = Astro.props;
+const { five } = data;
+---
+
+<section id="try" class="section" data-tone="social" data-look="frost">
+  <div class="container">
+    <SectionHead kicker={five.kicker} headline={five.headline} lead={five.lead} />
+
+    <ol class="things" role="list">
+      {five.items.map((th, i) => (
+        <li class:list={['thing', { 'is-open': i === 0 }]} data-fold>
+          <h3 class="thing__h">
+            <button class="thing__head" type="button" aria-expanded={i === 0 ? 'true' : 'false'} aria-controls={`thing-${i + 1}`} data-fold-toggle>
+              <span class="thing__no" aria-hidden="true">{i + 1}</span>
+              <span class="thing__text">
+                <span class="item-title thing__title">{th.title}</span>
+                <span class="thing__make">{th.makeItYours}</span>
+              </span>
+              <span class="thing__plus" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="thing__panel fold" id={`thing-${i + 1}`}>
+            <div>
+              <div class="thing__grid">
+                <div class="thing__read">
+                  <p class="soft-label">{t.five.what}</p>
+                  <p class="thing__what">{th.what}</p>
+                  <p>{th.more}</p>
+                  {th.careful && (
+                    <>
+                      <p class="soft-label">{t.five.careful}</p>
+                      <p>{th.careful}</p>
+                    </>
+                  )}
+                  <p class="thing__links">
+                    {th.links.map((l) => <a class="out-link" href={l.url} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>)}
+                  </p>
+                </div>
+                <div class="thing__do">
+                  <p class="soft-label">{t.five.hook}</p>
+                  <blockquote class="thing__hook type-serif">“{th.hook}”</blockquote>
+                  <p class="soft-label">{t.five.ways}</p>
+                  <ul>{th.ways.map((w) => <li>{w}</li>)}</ul>
+                  <p class="soft-label">{t.five.brands}</p>
+                  <p>{th.brands}</p>
+                  <button class="exp-pill exp-pill--ghost thing__copy" type="button" data-copy={thingBrief(th, t)} data-copied={t.five.copied} data-no-print>{t.five.copy}</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ol>
+
+    <p class="note" data-reveal="rise">{five.note}</p>
+  </div>
+</section>
+
+<style>
+  .things {
+    margin-top: clamp(40px, 6vw, 72px);
+    border-bottom: 1px solid rgb(var(--hair) / 0.24);
+  }
+
+  .thing {
+    border-top: 1px solid rgb(var(--hair) / 0.24);
+  }
+
+  .thing__h {
+    font: inherit;
+  }
+
+  .thing__head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 24px;
+    gap: var(--space-2) var(--space-4);
+    width: 100%;
+    padding-block: var(--space-5);
+    text-align: left;
+    color: rgb(var(--ink));
+  }
+
+  .thing__no {
+    grid-column: 1;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 850;
+    font-stretch: var(--stretch-wide);
+    line-height: 1;
+  }
+
+  .thing__text {
+    grid-column: 1;
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .thing__title {
+    font-size: clamp(1.75rem, 3.4vw, 3.25rem);
+    transition:
+      translate 400ms var(--ease-out),
+      opacity 300ms var(--ease-out);
+  }
+
+  .thing__make {
+    max-width: 44ch;
+    font-size: var(--type-lead);
+    line-height: 1.35;
+    color: rgb(var(--ink) / 0.86);
+  }
+
+  .thing__plus {
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    width: 22px;
+    height: 22px;
+    margin-top: 6px;
+    justify-self: end;
+    transition: rotate 400ms var(--ease-out);
+  }
+
+  .thing__plus::before,
+  .thing__plus::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: currentColor;
+  }
+
+  .thing__plus::after {
+    rotate: 90deg;
+  }
+
+  .is-open .thing__plus {
+    rotate: 45deg;
+  }
+
+  .thing__grid {
+    display: grid;
+    gap: var(--space-6);
+    padding-bottom: var(--space-7);
+  }
+
+  .thing__panel p,
+  .thing__panel ul {
+    max-width: 54ch;
+    margin: 0;
+  }
+
+  .thing__panel .soft-label {
+    margin-top: var(--space-5);
+    margin-bottom: var(--space-2);
+  }
+
+  .thing__read > .soft-label:first-child,
+  .thing__do > .soft-label:first-child {
+    margin-top: 0;
+  }
+
+  .thing__panel .thing__what {
+    margin-bottom: var(--space-3);
+  }
+
+  .thing__panel ul {
+    padding-left: 1.1em;
+  }
+
+  .thing__panel li + li {
+    margin-top: var(--space-2);
+  }
+
+  .thing__hook {
+    font-size: clamp(2.125rem, 3.6vw, 3.5rem);
+    line-height: 1.05;
+  }
+
+  .thing__panel .thing__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-5);
+    margin-top: var(--space-5);
+  }
+
+  .thing__copy {
+    margin-top: var(--space-5);
+  }
+
+  .note {
+    max-width: 60ch;
+    margin-top: var(--space-6);
+    color: rgb(var(--ink) / 0.82);
+  }
+
+  @media (min-width: 1024px) {
+    .thing__head {
+      grid-template-columns: 5rem minmax(0, 1fr) 24px;
+      align-items: start;
+      gap: var(--space-4);
+      padding-block: var(--space-6);
+    }
+
+    .thing__no {
+      font-size: clamp(3rem, 4.4vw, 4.5rem);
+    }
+
+    .thing__text {
+      grid-column: 2;
+    }
+
+    .thing__plus {
+      grid-column: 3;
+    }
+
+    .thing__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-8);
+      padding-left: calc(5rem + var(--space-4));
+    }
+  }
+
+  /* The others step back from the one under the pointer. */
+  @media (hover: hover) and (min-width: 1024px) {
+    .things:has(.thing__head:hover) .thing__title {
+      opacity: 0.5;
+    }
+
+    .things:has(.thing__head:hover) .thing__head:hover .thing__title {
+      opacity: 1;
+      translate: 14px 0;
+    }
+  }
+</style>

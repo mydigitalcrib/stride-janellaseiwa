@@ -1,0 +1,27 @@
+---
+// A headline from an issue's file: one block per line, with *words* in the serif accent.
+export interface Props {
+  lines: string[];
+  as?: 'h1' | 'h2' | 'h3';
+  class?: string;
+  [key: string]: unknown;
+}
+
+// `rest` carries the parent's style scope, so a parent can size its headline.
+const { lines, as: Tag = 'h2', class: className, ...rest } = Astro.props;
+const parts = (line: string) => line.split(/(\*[^*]+\*)/).filter(Boolean);
+---
+
+<Tag class:list={['exp-title', className]} {...rest}>
+  {lines.map((line) => (
+    <span class="line">
+      {parts(line).map((p) => (p.startsWith('*') ? <em class="type-serif">{p.slice(1, -1)}</em> : p))}
+    </span>
+  ))}
+</Tag>
+
+<style>
+  .line {
+    display: block;
+  }
+</style>

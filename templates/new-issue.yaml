@@ -1,0 +1,445 @@
+# Issue {{no}}: {{topic}}. Made from templates/new-issue.yaml by `npm run new-issue`.
+#
+# How to fill it in:
+# - Replace every [[ ... ]] with real words. The finished site won't build while any are left (unless draft is true).
+# - A headline is a list of lines. *Words between stars* are set in the serif accent.
+# - Put text in "quotes" if it starts with a quote mark, an @, a * or contains ": " (a colon then a space).
+# - Never invent creators, numbers or quotes. Every figure needs a source in `originals` at the bottom.
+# - src/content/issues/001-motherhood-family.yaml is a finished example to copy from.
+
+number: {{number}}
+topic: {{topic}}
+start: {{start}}
+end: {{end}}
+# While true, this issue only shows when you preview on your computer (npm run dev). Set it to false to publish.
+draft: true
+# False puts a notice on the cover saying the numbers still need checking. Set it to true once they're checked.
+figuresChecked: false
+# Who this issue is for, on the cover and in the footer. Delete the line to use the usual one from settings.yaml.
+audience: {{audience}}
+# The line under the headline on the home page while this is the newest issue.
+homeLine: "[[ What this audience is talking about, and what they can make this week. ]]"
+# Different words for this issue only (any line from `labels:` in src/content/settings.yaml). Delete if not needed.
+# labels:
+#   ideas:
+#     shots: How to make it
+
+headline:
+  - "[[ Headline, line 1 ]]"
+  - "[[ line 2 ]]"
+  - "*[[ line 3, in the serif accent ]]*"
+lede: "[[ Two sentences: what's happening this week and why it's worth their time. ]]"
+cover:
+  quote: "[[ “A short quote or sound that sums up the week” ]]"
+  line: "[[ One line that explains it. ]]"
+
+# A — This week in three
+week:
+  kicker: This week in three
+  headline:
+    - Three things
+    - "*worth knowing*"
+  items:
+    - title: "[[ First thing worth knowing ]]"
+      body: "[[ One or two sentences. ]]"
+    - title: "[[ Second thing ]]"
+      body: "[[ One or two sentences. ]]"
+    - title: "[[ Third thing ]]"
+      body: "[[ One or two sentences. ]]"
+  tryThis: "[[ The one most useful thing to try, in one line. ]]"
+  example:
+    body: "[[ The real examples behind it: who posted, when, and what happened (with the date you checked). ]]"
+    links:
+      - label: "[[ Watch @creator ]]"
+        url: https://example.com/[[replace-with-link]]
+  beats:
+    title: The whole format, in three beats
+    items:
+      - name: "[[ Beat 1 ]]"
+        line: "[[ “What it looks like” ]]"
+      - name: "[[ Beat 2 ]]"
+        line: "[[ “What it looks like” ]]"
+      - name: "[[ Beat 3 ]]"
+        line: "[[ What it looks like ]]"
+    footer: "[[ One closing line. ]]"
+
+# B — Five things worth your time. The first one starts open.
+five:
+  kicker: Worth your time
+  headline:
+    - Five things
+    - to *try this week*
+  lead: "[[ One line, e.g. Pick the one that sounds most like you. ]]"
+  note: "[[ Be honest about the evidence: which of the five you actually saw take off, and which are good starting points. ]]"
+  items:
+    - title: "[[ Trend 1 ]]"
+      makeItYours: "[[ What to make, in one line. ]]"
+      what: "[[ What's going on. ]]"
+      more: "[[ The evidence, with dates and numbers you checked. ]]"
+      hook: "[[ A hook they could say on camera ]]"
+      ways:
+        - "[[ Another way in ]]"
+        - "[[ Another way in ]]"
+        - "[[ Another way in ]]"
+      careful: "[[ A little care: what not to do. Delete this line if there's nothing to add. ]]"
+      brands: "[[ Kinds of brands this could suit ]]"
+      links:
+        - label: "[[ Watch @creator / Read the thread ]]"
+          url: https://example.com/[[replace-with-link]]
+    - title: "[[ Trend 2 ]]"
+      makeItYours: "[[ What to make, in one line. ]]"
+      what: "[[ What's going on. ]]"
+      more: "[[ The evidence. ]]"
+      hook: "[[ A hook ]]"
+      ways:
+        - "[[ Another way in ]]"
+        - "[[ Another way in ]]"
+        - "[[ Another way in ]]"
+      careful: "[[ A little care ]]"
+      brands: "[[ Brands ]]"
+      links:
+        - label: "[[ Link label ]]"
+          url: https://example.com/[[replace-with-link]]
+    - title: "[[ Trend 3 ]]"
+      makeItYours: "[[ What to make, in one line. ]]"
+      what: "[[ What's going on. ]]"
+      more: "[[ The evidence. ]]"
+      hook: "[[ A hook ]]"
+      ways:
+        - "[[ Another way in ]]"
+        - "[[ Another way in ]]"
+        - "[[ Another way in ]]"
+      careful: "[[ A little care ]]"
+      brands: "[[ Brands ]]"
+      links:
+        - label: "[[ Link label ]]"
+          url: https://example.com/[[replace-with-link]]
+    - title: "[[ Trend 4 ]]"
+      makeItYours: "[[ What to make, in one line. ]]"
+      what: "[[ What's going on. ]]"
+      more: "[[ The evidence. ]]"
+      hook: "[[ A hook ]]"
+      ways:
+        - "[[ Another way in ]]"
+        - "[[ Another way in ]]"
+        - "[[ Another way in ]]"
+      careful: "[[ A little care ]]"
+      brands: "[[ Brands ]]"
+      links:
+        - label: "[[ Link label ]]"
+          url: https://example.com/[[replace-with-link]]
+    - title: "[[ Trend 5 ]]"
+      makeItYours: "[[ What to make, in one line. ]]"
+      what: "[[ What's going on. ]]"
+      more: "[[ The evidence. ]]"
+      hook: "[[ A hook ]]"
+      ways:
+        - "[[ Another way in ]]"
+        - "[[ Another way in ]]"
+        - "[[ Another way in ]]"
+      careful: "[[ A little care ]]"
+      brands: "[[ Brands ]]"
+      links:
+        - label: "[[ Link label ]]"
+          url: https://example.com/[[replace-with-link]]
+
+# C — What the audience is actually talking about
+talking:
+  # The link to this section in the bar at the top, e.g. "What moms are saying", "What runners are saying".
+  nav: "[[ What they’re saying ]]"
+  kicker: Behind the feed
+  headline:
+    - "[[ What (audience) are ]]"
+    - "*actually*"
+    - talking about.
+  lead: "[[ The questions they're wrestling with this week. ]]"
+  questions:
+    - text: "[[ A real question from the research, in their words ]]"
+      link:
+        label: Read the thread
+        url: https://example.com/[[replace-with-link]]
+    - text: "[[ Another question ]]"
+      link:
+        label: Read the thread
+        url: https://example.com/[[replace-with-link]]
+    - text: "[[ A question without a link (delete the link lines) ]]"
+    - text: "[[ Another question ]]"
+  turn:
+    title: Turn it into content
+    body: "[[ How to answer these conversations in content. ]]"
+  care: "[[ One line of care. ]]"
+
+# D — 12 ideas. Each idea's `segment` must be one of the segment ids. The filters, counts and "12 ideas" in the bar
+# follow however many ideas there are.
+ideas:
+  kicker: Ready to film
+  headline:
+    - Content you can
+    - "*steal (creatively)*"
+  lead: Twelve ideas from this week. Tap one to see the hook and how to film it, then save your favorites.
+  filming: "[[ Filming tips that apply to every idea. ]]"
+  careful: "[[ A little care that applies to every idea. ]]"
+  segments:
+    - id: group1
+      label: "[[ Audience group 1 ]]"
+    - id: group2
+      label: "[[ Audience group 2 ]]"
+    - id: group3
+      label: "[[ Audience group 3 ]]"
+    - id: group4
+      label: "[[ Audience group 4 ]]"
+  items:
+    - id: 1
+      segment: group1
+      stage: "[[ Who it's for, e.g. Pregnancy & postpartum ]]"
+      title: "[[ Idea 1 ]]"
+      format: "[[ Reel or TikTok ]]"
+      time: "[[ 7–9 seconds ]]"
+      level: "[[ Easy / A little more effort ]]"
+      hook: "[[ The hook ]]"
+      shots:
+        - "[[ Shot 1 ]]"
+        - "[[ Shot 2 ]]"
+        - "[[ Shot 3 ]]"
+      caption: "[[ Caption ]]"
+      brands: "[[ Brands ]]"
+    - id: 2
+      segment: group1
+      stage: "[[ Who it's for ]]"
+      title: "[[ Idea 2 ]]"
+      format: "[[ Format ]]"
+      time: "[[ Length ]]"
+      level: "[[ Effort ]]"
+      hook: "[[ The hook ]]"
+      shots:
+        - "[[ Shot 1 ]]"
+        - "[[ Shot 2 ]]"
+        - "[[ Shot 3 ]]"
+      caption: "[[ Caption ]]"
+      brands: "[[ Brands ]]"
+    - id: 3
+      segment: group1
+      stage: "[[ Who it's for ]]"
+      title: "[[ Idea 3 ]]"
+      format: "[[ Format ]]"
+      time: "[[ Length ]]"
+      level: "[[ Effort ]]"
+      hook: "[[ The hook ]]"
+      shots:
+        - "[[ Shot 1 ]]"
+        - "[[ Shot 2 ]]"
+        - "[[ Shot 3 ]]"
+      caption: "[[ Caption ]]"
+      brands: "[[ Brands ]]"
+    - id: 4
+      segment: group2
+      stage: "[[ Who it's for ]]"
+      title: "[[ Idea 4 ]]"
+      format: "[[ Format ]]"
+      time: "[[ Length ]]"
+      level: "[[ Effort ]]"
+      hook: "[[ The hook ]]"
+      shots:
+        - "[[ Shot 1 ]]"
+        - "[[ Shot 2 ]]"
+        - "[[ Shot 3 ]]"
+      caption: "[[ Caption ]]"
+      brands: "[[ Brands ]]"
+    - id: 5
+      segment: group2
+      stage: "[[ Who it's for ]]"
+      title: "[[ Idea 5 ]]"
+      format: "[[ Format ]]"
+      time: "[[ Length ]]"
+      level: "[[ Effort ]]"
+      hook: "[[ The hook ]]"
+      shots:
+        - "[[ Shot 1 ]]"
+        - "[[ Shot 2 ]]"
+        - "[[ Shot 3 ]]"
+      caption: "[[ Caption ]]"
+      brands: "[[ Brands ]]"
+    - id: 6
+      segment: group2
+      stage: "[[ Who it's for ]]"
+      title: "[[ Idea 6 ]]"
+      format: "[[ Format ]]"
+      time: "[[ Length ]]"
+      level: "[[ Effort ]]"
+      hook: "[[ The hook ]]"
+      shots:
+        - "[[ Shot 1 ]]"
+        - "[[ Shot 2 ]]"
+        - "[[ Shot 3 ]]"
+      caption: "[[ Caption ]]"
+      brands: "[[ Brands ]]"
+    - id: 7
+      segment: group3
+      stage: "[[ Who it's for ]]"
+      title: "[[ Idea 7 ]]"
+      format: "[[ Format ]]"
+      time: "[[ Length ]]"
+      level: "[[ Effort ]]"
+      hook: "[[ The hook ]]"
+      shots:
+        - "[[ Shot 1 ]]"
+        - "[[ Shot 2 ]]"
+        - "[[ Shot 3 ]]"
+      caption: "[[ Caption ]]"
+      brands: "[[ Brands ]]"
+    - id: 8
+      segment: group3
+      stage: "[[ Who it's for ]]"
+      title: "[[ Idea 8 ]]"
+      format: "[[ Format ]]"
+      time: "[[ Length ]]"
+      level: "[[ Effort ]]"
+      hook: "[[ The hook ]]"
+      shots:
+        - "[[ Shot 1 ]]"
+        - "[[ Shot 2 ]]"
+        - "[[ Shot 3 ]]"
+      caption: "[[ Caption ]]"
+      brands: "[[ Brands ]]"
+    - id: 9
+      segment: group3
+      stage: "[[ Who it's for ]]"
+      title: "[[ Idea 9 ]]"
+      format: "[[ Format ]]"
+      time: "[[ Length ]]"
+      level: "[[ Effort ]]"
+      hook: "[[ The hook ]]"
+      shots:
+        - "[[ Shot 1 ]]"
+        - "[[ Shot 2 ]]"
+        - "[[ Shot 3 ]]"
+      caption: "[[ Caption ]]"
+      brands: "[[ Brands ]]"
+    - id: 10
+      segment: group4
+      stage: "[[ Who it's for ]]"
+      title: "[[ Idea 10 ]]"
+      format: "[[ Format ]]"
+      time: "[[ Length ]]"
+      level: "[[ Effort ]]"
+      hook: "[[ The hook ]]"
+      shots:
+        - "[[ Shot 1 ]]"
+        - "[[ Shot 2 ]]"
+        - "[[ Shot 3 ]]"
+      caption: "[[ Caption ]]"
+      brands: "[[ Brands ]]"
+    - id: 11
+      segment: group4
+      stage: "[[ Who it's for ]]"
+      title: "[[ Idea 11 ]]"
+      format: "[[ Format ]]"
+      time: "[[ Length ]]"
+      level: "[[ Effort ]]"
+      hook: "[[ The hook ]]"
+      shots:
+        - "[[ Shot 1 ]]"
+        - "[[ Shot 2 ]]"
+        - "[[ Shot 3 ]]"
+      caption: "[[ Caption ]]"
+      brands: "[[ Brands ]]"
+    - id: 12
+      segment: group4
+      stage: "[[ Who it's for ]]"
+      title: "[[ Idea 12 ]]"
+      format: "[[ Format ]]"
+      time: "[[ Length ]]"
+      level: "[[ Effort ]]"
+      hook: "[[ The hook ]]"
+      shots:
+        - "[[ Shot 1 ]]"
+        - "[[ Shot 2 ]]"
+        - "[[ Shot 3 ]]"
+      caption: "[[ Caption ]]"
+      brands: "[[ Brands ]]"
+
+# E — Sounds, signals and brands. Only call a sound trending if the research shows it.
+sound:
+  kicker: Sound and brands
+  headline:
+    - "[[ Headline line 1 ]]"
+    - "[[ line 2 ]]"
+    - "*[[ line 3 ]]*"
+  lead: "[[ Is there a sound worth using this week? Say honestly. ]]"
+  insteadTitle: "[[ The sound to use / Use this instead ]]"
+  instead:
+    - "[[ Option 1 ]]"
+    - "[[ Option 2 ]]"
+    - "[[ Option 3 ]]"
+  planning:
+    value: "[[ +000% ]]"
+    body: "[[ The search or signal behind the number. ]]"
+    note: "[[ What it does and doesn't prove. ]]"
+  brands:
+    title: Brands that fit naturally
+    list: "[[ Kinds of brands. ]]"
+    line: "[[ One line on how to include them naturally. ]]"
+    note: "[[ e.g. These are natural fits only. We haven't checked for open campaigns. ]]"
+
+# F — This week's challenge
+challenge:
+  kicker: "[[ Your challenge this week ]]"
+  headline:
+    - "[[ The *“name”* ]]"
+    - challenge.
+  body: "[[ What the challenge is and why it works. ]]"
+  steps:
+    - "[[ Step 1 ]]"
+    - "[[ Step 2 ]]"
+    - "[[ Step 3 ]]"
+  versionsTitle: Find your version
+  versions:
+    - who: "[[ Audience group ]]"
+      line: "[[ “Their version” ]]"
+    - who: "[[ Audience group ]]"
+      line: "[[ “Their version” ]]"
+    - who: "[[ Audience group ]]"
+      line: "[[ “Their version” ]]"
+  caption: "[[ “A caption they can use” ]]"
+  when: "[[ When to post ]]"
+  check: "[[ How to tell if it worked ]]"
+  closer: "[[ One closing line ]]"
+  # What "Copy the challenge" copies: everything they need while filming.
+  brief: |-
+    [[ Challenge name ]]
+
+    1. [[ Step 1 ]]
+    2. [[ Step 2 ]]
+    3. [[ Step 3 ]]
+
+    Caption: [[ caption ]]
+
+    When to post: [[ when ]]
+
+    Then check: [[ how to tell if it worked ]]
+
+# G — Sources and the fine print
+originals:
+  kicker: The fine print
+  headline:
+    - Want to see
+    - "*the originals?*"
+  notes:
+    - "[[ When the numbers were checked ]]"
+    - "[[ What the sources do and don't show ]]"
+    - "[[ What we couldn't check this week ]]"
+    - None of this promises a post will go viral. Your own take is what makes it work.
+    - "[[ Who it's for, and please keep it between us ]]"
+  groups:
+    - title: The videos
+      links:
+        - label: "[[ @creator on TikTok, date ]]"
+          url: https://example.com/[[replace-with-link]]
+    - title: The conversations
+      links:
+        - label: "[[ Thread title ]]"
+          url: https://example.com/[[replace-with-link]]
+    - title: The searches
+      links:
+        - label: "[[ Google Trends, region, dates ]]"
+          url: https://example.com/[[replace-with-link]]

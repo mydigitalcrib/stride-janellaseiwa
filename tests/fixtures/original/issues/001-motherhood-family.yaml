@@ -1,0 +1,450 @@
+# Issue 001, written for moms to read. Based on the research report's creator-facing pages, with every figure
+# checked against its research pages.
+# Left out on purpose: scores, confidence labels and the Google Trends chart (they read like a report), and the
+# report's "average index of 83" (its daily values average 82.4).
+number: 1
+topic: Motherhood & Family
+start: 2026-10-30
+end: 2026-11-06
+figuresChecked: true
+# The line under the headline on the home page while this is the latest issue.
+homeLine: What moms are talking about, and what you can film this week.
+
+headline:
+  - The little
+  - moments are
+  - "*having a big week.*"
+lede: From the first “MOM!” after you sit down to the activities that last 43 seconds, the best family content right now is specific, funny and beautifully ordinary.
+cover:
+  quote: “MOM!”
+  line: The shortest interruption is the whole story.
+
+week:
+  kicker: This week in three
+  headline:
+    - Three things
+    - "*worth knowing*"
+  items:
+    - title: Tiny interruption, giant recognition
+      body: Fast, 7 to 13-second parent reaction videos are landing because viewers recognize the moment before the payoff.
+    - title: Helpful beats perfect
+      body: "The ideas parents are warming to make life easier: a book before screens, water after trick-or-treating, one simple toddler job at dinner."
+    - title: November is planning season
+      body: Activity searches are already moving. Make the content that helps a parent feel ready, not behind.
+  tryThis: One clear thought, one real moment, one easy next step.
+  example:
+    body: Two parents posted quick videos like this on Nov 3. By Nov 6 they had more than 1.3 million views between them. Watch them to study the idea, not to copy the joke.
+    links:
+      - label: Watch @shaydiazfit
+        url: https://www.tiktok.com/@shaydiazfit/video/7704009912354950413
+      - label: Watch @firsttimedadam
+        url: https://www.tiktok.com/@firsttimedadam/video/7703989802147908886
+  beats:
+    title: The whole format, in three beats
+    items:
+      - name: The plan
+        line: “Finally sitting down.”
+      - name: The reality
+        line: “MOOOM!”
+      - name: The look
+        line: Say nothing. We get it.
+    footer: Your own voice beats chasing a sound.
+
+five:
+  kicker: Worth your time
+  headline:
+    - Five things
+    - to *try this week*
+  lead: Pick the one that sounds like your house.
+  note: Only the first one is a video format we actually saw take off. The other four come from what parents are saying and searching, so think of them as good starting points, not sure things.
+  items:
+    - title: The “of course” interruption
+      makeItYours: Start with your plan. Cut to the interruption. Let your face do the work.
+      what: One normal plan, one interruption, and one look that says it all. Two parents posted videos like this on Nov 3, and both took off.
+      more: When we checked on Nov 6, @shaydiazfit’s 7-second clip had about 899K views and 35K shares, and @firsttimedadam’s 13-second clip had about 405K views and 17K shares. That many shares on something so short usually means people thought, “this is so me.”
+      hook: "POV: you sit down for exactly 11 seconds."
+      ways:
+        - “The second I sit down.” Film the sit-down, then your reaction to a request from off camera.
+        - “The boundary lasted one smile.” Start serious, cut to the toy or tiny request, end with an honest smile.
+        - “The ‘quiet activity’ briefing.” Show the setup, then your face two seconds later.
+      careful: Don’t stage a tantrum or show a child upset. Your reaction is the joke.
+      brands: Loungewear, coffee, meal kits, family games, children’s books
+      links:
+        - label: Watch @shaydiazfit
+          url: https://www.tiktok.com/@shaydiazfit/video/7704009912354950413
+        - label: Watch @firsttimedadam
+          url: https://www.tiktok.com/@firsttimedadam/video/7703989802147908886
+    - title: The little thing kids loved most
+      makeItYours: Share a small book, drink or ritual that surprised you.
+      what: The Halloween moments parents loved weren’t always about candy. On Reddit they talked about used books, coloring books, water, juice and letting kids choose.
+      more: One post about handing out gently used books got 1,510 upvotes, and another about treat choices got 278 comments.
+      hook: Our surprise Halloween hit wasn’t candy.
+      ways:
+        - The thing that disappeared fastest at our door wasn’t the candy.
+        - Five things kids remember more than the candy.
+        - "Ask in Stories: “What was the best non-candy thing your kid got this year?”"
+      careful: Share what happened at your door, not what other families should hand out.
+      brands: Children’s books, reusable drinkware, snacks, art supplies
+      links:
+        - label: Read the books thread
+          url: https://www.reddit.com/r/Parenting/comments/1xkpqte/we_gave_out_gently_used_books_along_with_candy/
+        - label: Read the treats thread
+          url: https://www.reddit.com/r/Parenting/comments/1xktwm4/5_year_old_declining_treats_after_rummaging/
+    - title: Reading, but not as homework
+      makeItYours: Show the ritual, not a rulebook.
+      what: One parent’s routine of 20 minutes of reading before iPad or Switch time got people talking. Some love having a structure. Others worry it turns books into a chore.
+      more: There’s no one right answer here, which is what makes it good to talk about. Show what works at your house and ask what works at theirs.
+      hook: Our reading ritual, not our reading rule.
+      ways:
+        - Our screen-time conversation got easier when we tried this. Not perfect, just easier.
+        - Three reading rituals that don’t make books feel like homework.
+        - What I ask after a chapter instead of a quiz.
+      careful: Don’t promise it helps focus or behavior. Say what happened in your family.
+      brands: Bookstores, libraries, reading lamps, educational games
+      links:
+        - label: Read the thread
+          url: https://www.reddit.com/r/Parenting/comments/1xmyr4q/reading_before_devices/
+    - title: Nostalgic shows, new little rituals
+      makeItYours: Pair a childhood show with a no-clutter activity.
+      what: Parents are going back to slower shows like Little Bear, Dragon Tales and Mister Rogers, then noticing there’s barely any merch or party stuff to go with them.
+      more: Some find that frustrating. Others love having less to buy.
+      hook: Nostalgia doesn’t need a shopping cart.
+      ways:
+        - The tiny ritual we made instead of hunting for themed merch.
+        - Three calm shows we keep coming back to, and the activity we pair with each.
+        - Our after-show drawing tray.
+      careful: Don’t call any show better for development or “safe” screen time. Show the title or your own watchlist, not clips.
+      brands: Art supplies, bookstores, family streaming, printable activities
+      links:
+        - label: Read the thread
+          url: https://www.reddit.com/r/Parenting/comments/1xmhz3x/the_downside_to_showing_your_kids_old_tv_shows/
+    - title: Tiny hands, big holiday plans
+      makeItYours: Give little hands one real, manageable job.
+      what: Parents are already looking for toddler activities. Searches hit their high for the week on Nov 2, and “Thanksgiving toddler activities” was up 200%.
+      more: That tells us people are planning early. It doesn’t mean every holiday video will take off.
+      hook: A toddler’s actual job at family dinner.
+      ways:
+        - One prep task per day so Thanksgiving doesn’t become a 2 a.m. craft marathon.
+        - The activity that survives a 10-minute attention span.
+        - One task. Two hands. No elaborate craft required.
+      brands: Craft kits, family food, photo printing, activity subscriptions
+      links:
+        - label: See the searches
+          url: https://trends.google.com/trends/explore?geo=US&date=2026-10-30%202026-11-06&q=family%20holiday%20activities,toddler%20activities,screen%20free%20activities,holiday%20family%20traditions
+
+talking:
+  nav: What moms are saying
+  kicker: Behind the feed
+  headline:
+    - What moms are
+    - "*actually*"
+    - talking about.
+  lead: The questions parents are wrestling with this week.
+  questions:
+    - text: How do I make screens less of a fight without making books a chore?
+      link:
+        label: Read the thread
+        url: https://www.reddit.com/r/Parenting/comments/1xmyr4q/reading_before_devices/
+    - text: Why do kids’ activities start before working parents can get there?
+      link:
+        label: Read the thread
+        url: https://www.reddit.com/r/workingmoms/comments/1xn4tqx/extracurriculars_starting_before_500pm/
+    - text: Can we make holiday traditions simple enough to actually enjoy?
+    - text: What makes a neighborhood feel welcoming to a child?
+  turn:
+    title: Turn it into content
+    body: Ask “What works at your house?” Not “Here is the only way.” That’s where the useful conversations live.
+  care: Tell your own story. Never turn a stranger’s child or hard moment into content.
+
+ideas:
+  kicker: Ready to film
+  headline:
+    - Content you can
+    - "*steal (creatively)*"
+  lead: Twelve ideas from this week. Tap one to see the hook and how to film it, then save your favorites.
+  filming: Phone at eye level, natural light, one thought per shot, subtitles on. You never need to show your child’s face. Hands only, toys only or your own point of view all work just as well.
+  careful: Keep it kind and true. No staged meltdowns, no shaming anyone over screens, no medical or development advice. For paid posts, check that you can use the sound.
+  segments:
+    - id: postpartum
+      label: New moms
+    - id: toddlers
+      label: Toddlers
+    - id: schoolage
+      label: School age
+    - id: working
+      label: Working moms & more
+  items:
+    - id: 1
+      segment: postpartum
+      stage: Pregnancy & postpartum
+      title: I sat down once
+      format: Reel or TikTok
+      time: 7–9 seconds
+      level: Easy
+      hook: "POV: you finally sit down."
+      shots:
+        - Sit with a drink and relax your shoulders.
+        - Add an off-camera interruption or a caption.
+        - Look into the camera. Cut right away.
+      caption: The chair had other plans. What summons you fastest?
+      brands: Coffee, loungewear
+    - id: 2
+      segment: postpartum
+      stage: Pregnancy & postpartum
+      title: The newborn plan vs. the real plan
+      format: Reel
+      time: 10–15 seconds
+      level: Easy
+      hook: My pre-baby plan had a color code.
+      shots:
+        - Show a perfectly organized list.
+        - Reveal one real-life change to the plan.
+        - Finish with an honest grin. No guilt here.
+      caption: No shame in revising the plan.
+      brands: Planners, meal kits
+    - id: 3
+      segment: postpartum
+      stage: Pregnancy & postpartum
+      title: A reading ritual, not a reading rule
+      format: Carousel
+      time: 5 slides
+      level: A little more effort
+      hook: This is how we make books feel like comfort.
+      shots:
+        - "Cover: your ritual in one line."
+        - A favorite book and a cozy corner.
+        - Reading together, or you reading.
+        - One gentle question to ask.
+        - No reward, no test, just time together.
+      caption: What made you love reading as a kid?
+      brands: Books, lamps
+    - id: 4
+      segment: toddlers
+      stage: Toddlers & young families
+      title: The activity lasted 43 seconds
+      format: Reel or TikTok
+      time: 8 seconds
+      level: Easy
+      hook: I set up the cutest play activity…
+      shots:
+        - Film the setup for two seconds.
+        - Cut to a harmless, unexpected use of the materials.
+        - Finish on your reaction.
+      caption: Tell me your quickest activity flop.
+      brands: Activity kits, storage
+    - id: 5
+      segment: toddlers
+      stage: Toddlers & young families
+      title: The thing that went faster than candy
+      format: Reel
+      time: 15–20 seconds
+      level: A little more effort
+      hook: Our surprise Halloween hit wasn’t candy.
+      shots:
+        - Show your books, water or treats on a counter.
+        - Say what surprised you at your own door.
+        - Add a “save for next year” line.
+      caption: What was your kid’s surprise favorite?
+      brands: Books, drinkware
+    - id: 6
+      segment: toddlers
+      stage: Toddlers & young families
+      title: One actual job at dinner
+      format: Reel
+      time: 15 seconds
+      level: A little more effort
+      hook: A toddler-friendly Thanksgiving job that helps.
+      shots:
+        - Show one safe, simple task like napkins or place cards.
+        - Film hands only if you prefer.
+        - Show the finished table detail.
+      caption: Which jobs do your kids claim?
+      brands: Family food, craft supplies
+    - id: 7
+      segment: schoolage
+      stage: School-age families
+      title: Our after-school reset
+      format: Carousel
+      time: 6 slides
+      level: A little more effort
+      hook: We do this before everyone melts down.
+      shots:
+        - Schoolbag drop.
+        - Water and a snack.
+        - Ten minutes of connection.
+        - Optional reading time.
+        - What you let go of.
+        - Ask about their routine.
+      caption: What changes the whole afternoon at your house?
+      brands: Snacks, water, books
+    - id: 8
+      segment: schoolage
+      stage: School-age families
+      title: The show I reintroduced without buying every toy
+      format: Reel
+      time: 20 seconds
+      level: A little more effort
+      hook: Nostalgia, but make it low-clutter.
+      shots:
+        - Show the show’s title or your own watchlist, not clips.
+        - Set out one art activity inspired by it.
+        - Show the finished drawing.
+        - Put the supplies back on a small shelf.
+      caption: Which show did you bring back?
+      brands: Art supplies, streaming
+    - id: 9
+      segment: working
+      stage: Working moms
+      title: The 4:45 p.m. scramble
+      format: Reel or TikTok
+      time: 10 seconds
+      level: Easy
+      hook: When the kids’ activity begins before your workday ends…
+      shots:
+        - Close your laptop, with no work details in frame.
+        - Grab your bag and keys.
+        - React to the camera while parked, never while driving.
+      caption: Who invented 4:45?
+      brands: Calendar apps, meal solutions
+    - id: 10
+      segment: working
+      stage: Working moms
+      title: One thing off my invisible list
+      format: Reel
+      time: 12 seconds
+      level: Easy
+      hook: Today’s win is tiny, but it counts.
+      shots:
+        - Write down one household task.
+        - Check it off.
+        - Hold on one quiet win.
+      caption: Name one thing you carried today.
+      brands: Organization tools, home services
+    - id: 11
+      segment: working
+      stage: Mom life
+      title: The holiday prep I’m not doing at midnight
+      format: Carousel
+      time: 5 slides
+      level: A little more effort
+      hook: Five minutes today beats a panic later.
+      shots:
+        - One simple list.
+        - A craft or activity bin.
+        - Grocery notes.
+        - Time on the calendar.
+        - The outfit, and a realistic finish.
+      caption: Which task is future-you grateful for?
+      brands: Home organization, family food
+    - id: 12
+      segment: working
+      stage: Parent life
+      title: Softness is not inconsistency
+      format: Reel or TikTok
+      time: 10–13 seconds
+      level: Easy
+      hook: The boundary was solid until that face.
+      shots:
+        - Start with a playful serious face.
+        - Cut to an innocent request, object or drawing.
+        - Finish with a self-aware smile.
+      caption: Your softest parenting moment?
+      brands: Games, books, children’s clothing
+
+sound:
+  kicker: Sound and brands
+  headline:
+    - No must-use
+    - sound.
+    - "*That’s good news.*"
+  lead: We couldn’t find a sound we can honestly call trending for moms this week. Your own voice is enough.
+  insteadTitle: Use this instead
+  instead:
+    - The line your child always says (without recording a private moment)
+    - Coffee pouring, with your words on screen
+    - "One voice-over: “I thought I had 20 minutes.”"
+    - Music that’s cleared for commercial use, only when you need it
+  planning:
+    value: +200%
+    body: Searches for “Thanksgiving toddler activities” jumped 200%. Parents are planning early, so a simple idea now could really help.
+    note: It’s a sign of planning, not proof that holiday videos are going viral.
+  brands:
+    title: Brands that fit naturally
+    list: Books, family food, activity kits, calendars, art supplies, drinkware and comfortable everyday wear.
+    line: Make the product part of the moment, not the moment itself.
+    note: These are natural fits only. We haven’t checked for open campaigns.
+
+challenge:
+  kicker: Your 10-second challenge this week
+  headline:
+    - The *“of course”*
+    - challenge.
+  body: Every parent has that one tiny moment when life has other plans. Film yours. No polished set. No trending audio. Just a moment other parents recognize instantly.
+  steps:
+    - “Me, about to ___.”
+    - Reality arrives.
+    - “Of course.”
+  versionsTitle: Find your version
+  versions:
+    - who: Pregnant or postpartum
+      line: “Me, lying down while the baby sleeps.”
+    - who: Toddler at home
+      line: “Me, setting up a 20-minute activity.”
+    - who: Working mom
+      line: “Me, closing my laptop five minutes before pickup.”
+  caption: “Every parent has an ‘of course’ moment. Mine is ___.”
+  when: Post Nov 8–10, ideally in your usual evening sweet spot.
+  check: Then check. Did viewers stay? Did they send it to another parent? Did comments add their own version?
+  closer: The win is recognition, not perfection.
+  brief: |-
+    The 10-second “of course” challenge
+
+    1. Open with your plan in on-screen text: “Me, about to ___.”
+    2. Cut to the real-life interruption in the next two seconds.
+    3. End on your face, one line of your own, or the text: “Of course.”
+    4. Keep it 7–15 seconds. Use your own audio or an approved platform track.
+
+    Caption: “Every parent has an ‘of course’ moment. Mine is ___.”
+
+    When to post: Nov 8–10, around 6–9 pm your audience’s time. Try one weekday evening and one weekend slot.
+
+    Then check: Did viewers stay? Did they send it to another parent? Did comments add their own version?
+
+    Protect your child’s privacy. The win is recognition, not perfection.
+
+originals:
+  kicker: The fine print
+  headline:
+    - Want to see
+    - "*the originals?*"
+  notes:
+    - View and upvote counts are from Nov 6, so they’ll have moved since.
+    - Reddit threads show what the people commenting think, not what all moms think.
+    - We couldn’t compare Instagram the same way this week, and we didn’t look at Pinterest.
+    - None of this promises a post will go viral. Your own take is what makes it work.
+    - This is just for Stride Talent creators, so please keep it between us.
+  groups:
+    - title: The videos
+      links:
+        - label: "@shaydiazfit on TikTok, Nov 3"
+          url: https://www.tiktok.com/@shaydiazfit/video/7704009912354950413
+        - label: "@firsttimedadam on TikTok, Nov 3"
+          url: https://www.tiktok.com/@firsttimedadam/video/7703989802147908886
+    - title: The conversations
+      links:
+        - label: Books alongside Halloween candy
+          url: https://www.reddit.com/r/Parenting/comments/1xkpqte/we_gave_out_gently_used_books_along_with_candy/
+        - label: Halloween treat choices
+          url: https://www.reddit.com/r/Parenting/comments/1xktwm4/5_year_old_declining_treats_after_rummaging/
+        - label: Reading before devices
+          url: https://www.reddit.com/r/Parenting/comments/1xmyr4q/reading_before_devices/
+        - label: Old kids’ shows
+          url: https://www.reddit.com/r/Parenting/comments/1xmhz3x/the_downside_to_showing_your_kids_old_tv_shows/
+        - label: Activities starting before 5 p.m.
+          url: https://www.reddit.com/r/workingmoms/comments/1xn4tqx/extracurriculars_starting_before_500pm/
+        - label: Early holiday resources
+          url: https://www.reddit.com/r/Parenting/comments/1xnah2k/santaaaa/
+    - title: The searches
+      links:
+        - label: Google Trends, US, Oct 30 to Nov 6
+          url: https://trends.google.com/trends/explore?geo=US&date=2026-10-30%202026-11-06&q=family%20holiday%20activities,toddler%20activities,screen%20free%20activities,holiday%20family%20traditions

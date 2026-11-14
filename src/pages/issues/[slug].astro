@@ -1,0 +1,52 @@
+---
+// An issue, read top to bottom like a short magazine. Everything on the page comes from its YAML file in
+// src/content/issues/, and the shared words from src/content/settings.yaml.
+import Challenge from '@/components/issue/Challenge.astro';
+import Cover from '@/components/issue/Cover.astro';
+import Five from '@/components/issue/Five.astro';
+import Ideas from '@/components/issue/Ideas.astro';
+import Originals from '@/components/issue/Originals.astro';
+import Sound from '@/components/issue/Sound.astro';
+import Talking from '@/components/issue/Talking.astro';
+import Week from '@/components/issue/Week.astro';
+import Layout from '@/layouts/Layout.astro';
+import { audienceOf, fill, getIssues, getSettings, issueDates, issueNo, labelsFor, type Issue } from '@/lib/issues';
+
+export async function getStaticPaths() {
+  const issues = await getIssues();
+  return issues.map((issue) => ({ params: { slug: issue.id }, props: { issue } }));
+}
+
+const { issue } = Astro.props as { issue: Issue };
+const { data } = issue;
+const settings = await getSettings();
+const t = labelsFor(settings, data);
+const audience = audienceOf(settings, data);
+
+const sections = [
+  { id: 'week', label: t.nav.week, inBar: true },
+  { id: 'try', label: t.nav.try, inBar: true },
+  { id: 'talking', label: data.talking.nav ?? t.nav.talking, inBar: true },
+  { id: 'ideas', label: fill(t.nav.ideas, { count: data.ideas.items.length }), inBar: true },
+  { id: 'sound', label: t.nav.sound, inBar: false },
+  { id: 'challenge', label: t.nav.challenge, inBar: true },
+  { id: 'originals', label: t.nav.originals, inBar: false },
+];
+---
+
+<Layout
+  title={`Issue ${issueNo(data)} · ${settings.reportName} · ${settings.department}`}
+  brand={settings.brand}
+  sections={sections}
+  footerNote={`${audience}. ${settings.keepPrivate}`}
+  footerLine={`Issue ${issueNo(data)} · ${issueDates(data)}`}
+>
+  <Cover data={data} t={t} reportName={settings.reportName} audience={audience} />
+  <Week data={data} t={t} />
+  <Five data={data} t={t} />
+  <Talking data={data} />
+  <Ideas data={data} t={t} />
+  <Sound data={data} />
+  <Challenge data={data} t={t} />
+  <Originals data={data} t={t} />
+</Layout>

@@ -1,0 +1,515 @@
+# Issue 001 of Janella's site, written for Janella (@janellaseiwa) to read. Made from the Stride Talent research
+# PDF "Stride_Janella_Weekly_Trends_2026-11-13" (research week Fri Nov 6 to Thu Nov 12, sources checked Nov 13).
+# Every figure here was checked against that PDF; the Generation New Era figure was also checked against the article.
+# UK spelling, because Janella and her audience are in the UK.
+#
+# Left out on purpose: the report's section numbers and source codes, the follower count, and its notes for Stride
+# (the Ninja mention, "the talent manager's top three" wording). Her four-part series "My Postpartum Exploration Era"
+# is ideas 13 to 16, in its own filter group, because the template has no separate series section. The series line
+# ("I'm a mum now, but I'm still discovering who I am") is in the lede.
+# An idea's "time" is how many shots, slides or clips its steps use: the research gives no video lengths per idea.
+number: 1
+topic: Motherhood & Family
+start: 2026-11-06
+end: 2026-11-12
+draft: false
+figuresChecked: true
+audience: Just for Janella (@janellaseiwa)
+homeLine: The funny, honest side of new motherhood, and what you can film this week.
+
+headline:
+  - The beautiful
+  - chaos of
+  - "*growing together.*"
+lede: Your best stories this week are the ones you’re already living. Plus a new four-part series for you, because you’re a mum now, and you’re still discovering who you are.
+cover:
+  quote: “Plot twist.”
+  line: The everyday surprises of new motherhood are your best stories right now.
+
+week:
+  kicker: This week in three
+  headline:
+    - Three things
+    - "*worth knowing*"
+  items:
+    - title: Feeding is already a conversation
+      body: Your Nov 10 post about bottle refusal, milestones and changes to sleep got followers sharing their own stories. They’ve already told you this part of your life matters to them.
+    - title: Family humour gets people talking
+      body: Your family Reel from Nov 8–9 had 510 likes and 99 comments when we checked on Nov 13. Some of the comments joked about Dad’s side of things.
+    - title: The first-Christmas question is starting
+      body: "On Nov 10, UK parents on Reddit were debating whether a newborn really needs Christmas presents: something practical, a keepsake, or nothing at all."
+  tryThis: Show what you expected of life with a baby, then the funny, everyday reality.
+  example:
+    body: Your own posts are the proof this week. Your Nov 10 feeding post had 316 likes and 17 comments, and your Nov 8–9 family Reel had 510 likes and 99 comments, both checked on Nov 13. We couldn’t see reach or saves, so that’s the public picture only.
+    links:
+      - label: See your feeding post
+        url: https://www.instagram.com/janellaseiwa/p/DfkjeuwgKud/
+      - label: Watch your family Reel
+        url: https://www.instagram.com/janellaseiwa/reel/DfhmpwqBb32/
+  beats:
+    title: The whole format, in three beats
+    items:
+      - name: The plan
+        line: “I thought leaving the house would be simple.”
+      - name: The reality
+        line: Three quick scenes of what actually happened.
+      - name: The question
+        line: Ask something you genuinely want to know.
+    footer: 20–30 seconds and your own voiceover. No polish needed.
+
+five:
+  kicker: Worth your time
+  headline:
+    - Five things
+    - to *try this week*
+  lead: They’re in order of how well they fit you, so start at the top.
+  note: The first two come straight from your own posts and what your followers said. The others come from a UK parents’ forum, another creator’s Reel and a news story. None of them is a proven viral trend, so think of them as good starting points.
+  items:
+    - title: The feeding plot twist
+      makeItYours: A funny follow-up about how one outing actually went.
+      what: In your Nov 10 milestone post you talked about your baby refusing bottles and what it did to your plans. Followers answered with their own stories.
+      more: It had 316 likes and 17 comments when we checked on Nov 13. Your audience has already shown they care about this part of your life, so keep the conversation going.
+      hook: The bottle has officially rejected my plans.
+      ways:
+        - “I thought leaving the house would be simple.” Getting ready, the plan falling apart, your face.
+        - “Things I was not prepared for as a new mum.” Straight to camera, like a confession.
+        - “I planned to do all of this today.” Three tasks on screen, the interruptions, one small win.
+      careful: Keep it personal and funny. No feeding or health advice in the video or the caption.
+      brands: Baby feeding accessories, home and lifestyle
+      links:
+        - label: See your post
+          url: https://www.instagram.com/janellaseiwa/p/DfkjeuwgKud/
+    - title: Parenting as a team
+      makeItYours: A playful “shift handover” starring you both.
+      what: Your early-November family Reel got people talking, including some laughs about Dad’s side of new parenthood.
+      more: It had 510 likes and 99 comments when we checked on Nov 13. A couple dynamic like this is easy to repeat and needs very little setup.
+      hook: "POV: Dad is on duty."
+      ways:
+        - “Parenthood looked easier from the sidelines.”
+        - “Things we say now that we have a baby.”
+        - “When the next shift clocks in.” Two reactions and short subtitles.
+      careful: Only film it if you’re both into it, and don’t make either of you the punchline.
+      brands: Family lifestyle
+      links:
+        - label: Watch your Reel
+          url: https://www.instagram.com/janellaseiwa/reel/DfhmpwqBb32/
+    - title: Baby’s first Christmas, without the pressure
+      makeItYours: Ask your followers in a poll, then share your own answer.
+      what: On Nov 10, UK parents on Reddit debated whether newborns need Christmas presents at all, and whether something practical or a keepsake makes more sense.
+      more: A first Christmas as a family fits the chapter you’re in, and it’s the time of year UK families are starting to think about it.
+      hook: Does my baby actually need a Christmas list?
+      ways:
+        - "“Be honest: the presents are really for me.”"
+        - “Our first Christmas as three.” Decorating, one keepsake and one little family ritual.
+        - "A Story poll: a practical gift, a keepsake or no presents?"
+      careful: Keep private details of your home out of shot.
+      brands: Baby gifting, holiday homeware
+      links:
+        - label: Read the thread
+          url: https://www.reddit.com/r/UKParenting/comments/1xswaek/do_you_buy_a_newborn_baby_christmas_presents/
+    - title: Little moments, big feelings
+      makeItYours: A short, everyday joy break, with a caption only you could write.
+      what: On Nov 11 another creator posted a mum-and-baby dance Reel to ROLE MODEL’s “Sally, When The Wine Runs Out.”
+      more: That’s one use of the sound, not proof it’s trending. The useful part is the idea, a quick, loving moment you can make fast without showing too much of your baby.
+      hook: Our five-minute dance break.
+      ways:
+        - “A memory I never want to forget.”
+        - “When the day needs a reset.”
+        - “A little reset in the middle of the chaos.” One joyful moment, one relatable line on screen.
+      careful: Use a sound you have the rights to on the platform, especially for a paid post.
+      brands: Lifestyle, wellness
+      links:
+        - label: Watch the Reel
+          url: https://www.instagram.com/reel/Dfm-SEIsj7C/
+    - title: What does raising a child look like today?
+      makeItYours: A voiceover about what you hope your child remembers.
+      what: On Nov 12, Health & Care Scotland wrote about Generation New Era, a new study that will follow 30,000 babies born across the UK in 2026 as they grow up.
+      more: It’s a natural moment for a thoughtful, first-person reflection on modern parenting, the support around you and the family you’re building.
+      hook: What I hope my child remembers.
+      ways:
+        - “The village behind our family.” The people who help, with their permission.
+        - “What motherhood has taught me so far.”
+        - “One day, I hope you know this.” Three sentences over details from home.
+      brands: Books, keepsakes, family and lifestyle
+      links:
+        - label: Read the article
+          url: https://healthandcare.scot/stories/4498/child-baby-scottish-parent-study-era-generation-edinburgh-reynolds-goodman
+
+talking:
+  nav: What your followers say
+  kicker: Behind the feed
+  headline:
+    - What your audience is
+    - "*actually*"
+    - talking about.
+  lead: What people said under your posts, and on one UK parents’ forum.
+  questions:
+    - text: How did these months go so fast?
+      link:
+        label: See your milestone Reel
+        url: https://www.instagram.com/janellaseiwa/reel/Dfpz8-5h_iW/
+    - text: Has anyone else been through this with bottles and sleep?
+      link:
+        label: See your feeding post
+        url: https://www.instagram.com/janellaseiwa/p/DfkjeuwgKud/
+    - text: Who’s looking after Dad in all this?
+      link:
+        label: Watch your family Reel
+        url: https://www.instagram.com/janellaseiwa/reel/DfhmpwqBb32/
+    - text: Is it just me, or is there never enough time?
+      link:
+        label: See your home-routine Reel
+        url: https://www.instagram.com/janellaseiwa/reel/DfSlAEJgRm7/
+    - text: Do newborns really need Christmas presents?
+      link:
+        label: Read the thread
+        url: https://www.reddit.com/r/UKParenting/comments/1xswaek/do_you_buy_a_newborn_baby_christmas_presents/
+  turn:
+    title: Turn it into content
+    body: Answer with your own story. A warm monthly look back that ends on a funny reality check. An honest update, not a feeding tutorial. A couple sketch where nobody is the punchline. A day in the life that’s happily unpolished.
+  care: A few comments aren’t your whole audience, and comment threads aren’t medical advice. Ask before featuring family, and keep your baby’s health, routine and location private.
+
+ideas:
+  kicker: Ready to film
+  headline:
+    - Ideas you can
+    - "*actually film*"
+  lead: "Twelve ideas from this week, plus four episodes of a new series for you: My Postpartum Exploration Era. Tap one to see the hook and how to film it, then save your favourites."
+  filming: Your own voiceover and short subtitles go a long way. Whenever you’d rather not show your baby, details from home, hands or your own point of view work just as well.
+  careful: Keep it kind and true. No feeding, sleep or recovery advice, nobody as the punchline, and ask before you film family, or anyone at a venue. Choose music that’s cleared for the platform, especially for paid posts. For the series, go at your own pace, weekly or every two weeks, and pick things you actually want to try.
+  segments:
+    - id: everyday
+      label: Everyday chaos
+    - id: family
+      label: Family & your village
+    - id: memories
+      label: Milestones & memories
+    - id: christmas
+      label: First Christmas
+    - id: series
+      label: Your new series
+  items:
+    - id: 1
+      segment: everyday
+      stage: For new mums
+      title: The bottle has other plans
+      format: Reel
+      time: 3 shots
+      level: Easy
+      hook: "POV: You have plans, and the bottle says no."
+      shots:
+        - Getting ready to go out.
+        - The plan falling apart.
+        - Your funny reaction. End by asking other parents how theirs went.
+      caption: Turns out I’m not the one making the schedule anymore.
+      brands: Baby feeding accessories
+    - id: 2
+      segment: everyday
+      stage: For busy parents
+      title: The to-do list vs. reality
+      format: Reel
+      time: 3 shots
+      level: Easy
+      hook: I planned to do all of this today.
+      shots:
+        - Three tasks on screen.
+        - The ordinary interruptions.
+        - One small win to finish.
+      caption: I had a whole itinerary. My baby had other ideas.
+      brands: Home and lifestyle
+    - id: 3
+      segment: family
+      stage: For couples and parents
+      title: "Mum vs. Dad: the shift handover"
+      format: Reel
+      time: 3 shots
+      level: Easy
+      hook: When the next shift clocks in.
+      shots:
+        - A playful handover, with you both happy to be in it.
+        - Both of your reactions.
+        - Short subtitles over the top.
+      caption: Teamwork makes the dream work… allegedly.
+      brands: Family lifestyle
+    - id: 4
+      segment: everyday
+      stage: For working and stay-at-home mums
+      title: Five unfinished tasks
+      format: Carousel
+      time: 5 slides
+      level: Easy
+      hook: Everything I started and did not finish.
+      shots:
+        - Five scenes from around the house, with nothing private in shot.
+        - A candid caption on each.
+        - End on a light note.
+      caption: Tomorrow is another day, apparently.
+      brands: Home organisation
+    - id: 5
+      segment: memories
+      stage: For parents of babies
+      title: The month that disappeared
+      format: Reel
+      time: 5 clips
+      level: A little more effort
+      hook: How has another month gone already?
+      shots:
+        - Pick five milestone clips you’re happy to share.
+        - Record a loving, lightly funny voiceover.
+        - Lay it over the clips.
+      caption: Someone please explain where the time went.
+      brands: Keepsakes, photo printing
+    - id: 6
+      segment: family
+      stage: For adult daughters and families
+      title: One question for Mum
+      format: Interview Reel
+      time: 3 shots
+      level: A little more effort
+      hook: One question I have always wanted to ask my mum.
+      shots:
+        - Agree on the question together first.
+        - Record it with her consent.
+        - Watch the final edit together before you post.
+      caption: Some conversations deserve to be remembered.
+      brands: Family storytelling, creative tools
+    - id: 7
+      segment: memories
+      stage: For young families
+      title: What we want our child to know
+      format: Voiceover Reel
+      time: 3 shots
+      level: A little more effort
+      hook: One day, I hope you know this.
+      shots:
+        - Write three thoughtful sentences.
+        - Film details from home instead of private footage of your baby.
+        - Read your sentences over the top.
+      caption: The little things are the big things.
+      brands: Books, keepsakes
+    - id: 8
+      segment: family
+      stage: For families and support networks
+      title: The village behind us
+      format: Carousel
+      time: 3 slides
+      level: Easy
+      hook: Nobody does this alone.
+      shots:
+        - Ask the people who help if you can feature them.
+        - Choose three moments of support.
+        - Write a short thank-you for each.
+      caption: So much love goes into raising one little person.
+      brands: Family, lifestyle
+    - id: 9
+      segment: christmas
+      stage: For first-time parents
+      title: Does baby need a Christmas list?
+      format: Reel and poll
+      time: 3 shots
+      level: Easy
+      hook: What are we buying a newborn for Christmas?
+      shots:
+        - Share the dilemma, friendly and light.
+        - Show two or three options.
+        - Follow up with a Story poll.
+      caption: Is this for him or for me?
+      brands: Baby gifting
+    - id: 10
+      segment: christmas
+      stage: For young families
+      title: Our first Christmas as three
+      format: Mini-vlog
+      time: 3 scenes
+      level: A little more effort
+      hook: Starting a new family tradition.
+      shots:
+        - Decorating.
+        - One keepsake.
+        - One little family ritual. Keep private details of your home out of shot.
+      caption: A new little tradition begins.
+      brands: Holiday homeware
+    - id: 11
+      segment: everyday
+      stage: For mums and lifestyle
+      title: Five minutes of joy
+      format: Reel
+      time: 3 shots
+      level: Easy
+      hook: A little reset in the middle of the chaos.
+      shots:
+        - A short, joyful moment.
+        - One relatable line on screen.
+        - Music that’s cleared for the platform.
+      caption: Sometimes this is all the reset I need.
+      brands: Lifestyle, wellness
+    - id: 12
+      segment: memories
+      stage: For mums and creatives
+      title: My camera roll as a new mum
+      format: Carousel
+      time: 6 slides
+      level: Easy
+      hook: My camera roll has officially changed.
+      shots:
+        - Pick six photos with nothing sensitive in them.
+        - Alternate funny and heartfelt captions.
+        - Finish on a thoughtful note.
+      caption: Apparently this is my whole personality now.
+      brands: Photography, storage
+    - id: 13
+      segment: series
+      stage: My Postpartum Exploration Era, episode 1
+      title: Something I’ve always wanted to try
+      format: Reel series
+      time: Episode 1 of 4
+      level: Your pace
+      hook: Welcome to my postpartum exploration era. Today I’m finally trying something I always wanted to do.
+      shots:
+        - Pick pottery, painting, a cooking workshop, or anything you’ve wanted to try.
+        - Film your first impressions, and the mistakes.
+        - Finish with how you feel afterwards.
+      caption: Episode one and we’re already learning things about ourselves. What should I try next?
+      brands: Beginner classes, crafts, local experiences
+    - id: 14
+      segment: series
+      stage: My Postpartum Exploration Era, episode 2
+      title: A little outside my comfort zone
+      format: Reel series
+      time: Episode 2 of 4
+      level: Your pace
+      hook: Old me would have talked myself out of this. Not today.
+      shots:
+        - Try a low-pressure beginner skill, class or creative activity.
+        - Keep it funny, and about the process.
+        - Being good at it isn’t the point.
+      caption: I was nervous but I actually did it. Anyone else in their trying-new-things era?
+      brands: Activities, fashion, beauty, wellness
+    - id: 15
+      segment: series
+      stage: My Postpartum Exploration Era, episode 3
+      title: A date with myself
+      format: Reel series
+      time: Episode 3 of 4
+      level: Your pace
+      hook: When did I last do something just because I wanted to?
+      shots:
+        - Plan a solo outing, like a museum, a café or a new neighbourhood, at a time that suits you.
+        - Film the scenery and what you discover.
+        - Add your candid thoughts.
+      caption: A little adventure, just for me. I might make this a habit.
+      brands: Hospitality, attractions, lifestyle
+    - id: 16
+      segment: series
+      stage: My Postpartum Exploration Era, episode 4
+      title: Who am I becoming?
+      format: Reel series
+      time: Episode 4 of 4
+      level: Your pace
+      hook: Four new experiences later, here’s what surprised me.
+      shots:
+        - Edit a montage from the earlier episodes.
+        - Share your favourite moments, what didn’t work, and one next experiment.
+        - End with a vote for season two.
+      caption: Motherhood changed my life, but my curiosity is coming with me.
+      brands: Photo and video tools, experiences
+
+sound:
+  kicker: Sound and brands
+  headline:
+    - Good signals,
+    - "*no hype.*"
+  lead: One sound came up this week. ROLE MODEL’s “Sally, When The Wine Runs Out” was in another creator’s mum-and-baby Reel on Nov 11. That’s one use, not a trend, so your own voice is just as good.
+  insteadTitle: Formats worth testing
+  instead:
+    - Talking straight to camera, like a confession
+    - Light couple sketches
+    - Month-by-month family reflections
+    - Personal voiceovers
+    - Beginner adventures, one episode at a time
+  planning:
+    value: "30,000"
+    body: That’s how many babies born across the UK in 2026 a new study, Generation New Era, will follow as they grow up.
+    note: It’s a news story to react to with your own thoughts, not a sign of what’s trending.
+  brands:
+    title: Brands that fit naturally
+    list: Baby essentials, family keepsakes, home and kitchen, lifestyle experiences, photography, activities and local attractions.
+    line: Make the product part of the moment, not the moment itself.
+    note: These are natural fits only. None of them is a confirmed partner or campaign.
+
+challenge:
+  kicker: Your challenge this week
+  headline:
+    - One real moment,
+    - "*two emotions.*"
+  body: One Reel that starts with a laugh and ends with something heartfelt, made from a real moment in your week.
+  steps:
+    - Film a funny interrupted task, a family moment and one quiet detail at home.
+    - Edit it to 20–35 seconds, with a strong first two seconds and a thoughtful last line.
+    - Post it with a question you really want answered.
+  versionsTitle: Our top three for you
+  versions:
+    - who: The feeding plot twist
+      line: “The bottle has officially rejected my plans.”
+    - who: Parenting as a team
+      line: "“POV: Dad is on duty.”"
+    - who: Your new series
+      line: “Welcome to my postpartum exploration era.”
+  caption: “Turns out I’m not the one making the schedule anymore.”
+  when: Post it this week, and end the caption with your question.
+  check: After 48 hours, look at reach, comments, saves and shares. If you can share your Instagram Insights with us, we’ll compare saves and shares with your last five similar Reels.
+  closer: Don’t judge it by views alone.
+  brief: |-
+    One real moment, two emotions
+
+    1. Film a funny interrupted task, a family moment and one quiet detail at home.
+    2. Edit it to 20–35 seconds, with a strong first two seconds and a thoughtful last line.
+    3. Post it with a question you really want answered.
+
+    Caption: “Turns out I’m not the one making the schedule anymore.” Then add your question.
+
+    When to post: this week.
+
+    Then check, after 48 hours: reach, comments, saves and shares. Don’t judge it by views alone.
+
+    Keep your baby’s health, routine and location private.
+
+originals:
+  kicker: The fine print
+  headline:
+    - Want to see
+    - "*the originals?*"
+  notes:
+    - Likes and comments were checked on Nov 13, so they’ll have moved since.
+    - Comments and Reddit replies show what the people commenting think, not your whole audience or all UK parents.
+    - We couldn’t see reach, watch time, saves, shares or who your followers are. Those need your Instagram Insights.
+    - The series and the brand ideas are our own suggestions, not existing trends or confirmed deals. Nothing here is medical advice.
+    - None of this promises a post will go viral. Your own take is what makes it work.
+    - This is just for you and Stride Talent, so please keep it between us.
+  groups:
+    - title: Your posts
+      links:
+        - label: Your Instagram profile
+          url: https://www.instagram.com/janellaseiwa/
+        - label: Your milestone Reel, Nov 12
+          url: https://www.instagram.com/janellaseiwa/reel/Dfpz8-5h_iW/
+        - label: Your feeding post, Nov 10
+          url: https://www.instagram.com/janellaseiwa/p/DfkjeuwgKud/
+        - label: Your family Reel, Nov 8–9
+          url: https://www.instagram.com/janellaseiwa/reel/DfhmpwqBb32/
+        - label: Your personal-reflection Reel, Nov 4–5
+          url: https://www.instagram.com/janellaseiwa/reel/DfXTdBOB94k/
+        - label: Your home-routine Reel, Nov 3
+          url: https://www.instagram.com/janellaseiwa/reel/DfSlAEJgRm7/
+        - label: Your conversation with your mum, Oct 15
+          url: https://www.instagram.com/janellaseiwa/reel/DehHDfFgjhm/
+    - title: Other creators
+      links:
+        - label: Katie Austin’s mum-and-baby Reel, Nov 11
+          url: https://www.instagram.com/reel/Dfm-SEIsj7C/
+    - title: The conversations and the news
+      links:
+        - label: "r/UKParenting: newborn Christmas presents, Nov 10"
+          url: https://www.reddit.com/r/UKParenting/comments/1xswaek/do_you_buy_a_newborn_baby_christmas_presents/
+        - label: "Health & Care Scotland: Generation New Era, Nov 12"
+          url: https://healthandcare.scot/stories/4498/child-baby-scottish-parent-study-era-generation-edinburgh-reynolds-goodman

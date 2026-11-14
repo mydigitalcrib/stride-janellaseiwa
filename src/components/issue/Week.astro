@@ -1,0 +1,170 @@
+---
+// This week in three: what's going on, one thing to try, the two videos behind it, and the format in three beats.
+import SectionHead from '@/components/SectionHead.astro';
+import type { IssueData, Labels } from '@/lib/issues';
+
+export interface Props {
+  data: IssueData;
+  t: Labels;
+}
+
+const { data, t } = Astro.props;
+const { week } = data;
+---
+
+<section id="week" class="section" data-tone="social" data-look="pale">
+  <div class="container">
+    <SectionHead kicker={week.kicker} headline={week.headline} />
+
+    <ol class="three" role="list">
+      {week.items.map((item, i) => (
+        <li class="point" data-reveal="rise" style={`--reveal-delay: ${i * 70}ms`}>
+          <span class="point__no" aria-hidden="true">{i + 1}</span>
+          <h3 class="item-title point__title">{item.title}</h3>
+          <p>{item.body}</p>
+        </li>
+      ))}
+    </ol>
+
+    <div class="try" data-reveal="rise">
+      <p class="soft-label">{t.week.tryThis}</p>
+      <p class="try__line type-serif">{week.tryThis}</p>
+    </div>
+
+    <div class="example" data-reveal="rise">
+      <p>{week.example.body}</p>
+      <p class="example__links">
+        {week.example.links.map((l) => (
+          <a class="out-link" href={l.url} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>
+        ))}
+      </p>
+    </div>
+
+    <div class="beats">
+      <p class="soft-label beats__title">{week.beats.title}</p>
+      <ol class="beats__list" role="list">
+        {week.beats.items.map((b) => (
+          <li class="beat" data-beat>
+            <span class="beat__name exp-title">{b.name}</span>
+            <span class="beat__line type-serif">{b.line}</span>
+          </li>
+        ))}
+      </ol>
+      <p class="beats__foot">{week.beats.footer}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .three {
+    display: grid;
+    gap: var(--space-6);
+    margin-top: clamp(40px, 6vw, 80px);
+  }
+
+  .point {
+    display: grid;
+    gap: var(--space-2);
+    padding-top: var(--space-4);
+    border-top: 1px solid rgb(var(--hair) / 0.24);
+  }
+
+  .point__no {
+    font-family: var(--font-display);
+    font-size: clamp(2.75rem, 5vw, 4.75rem);
+    font-weight: 850;
+    font-stretch: var(--stretch-wide);
+    line-height: 1;
+  }
+
+  .point__title {
+    font-size: clamp(1.5rem, 2.3vw, 2.125rem);
+  }
+
+  .try {
+    display: grid;
+    gap: var(--space-3);
+    margin-top: clamp(64px, 9vw, 128px);
+  }
+
+  .try__line {
+    max-width: 20ch;
+    font-size: clamp(2.5rem, 6.4vw, 6.25rem);
+    line-height: 1;
+    text-wrap: balance;
+  }
+
+  .example {
+    display: grid;
+    gap: var(--space-4);
+    max-width: 54ch;
+    margin-top: var(--space-6);
+  }
+
+  .example__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-5);
+  }
+
+  .beats {
+    margin-top: clamp(64px, 9vw, 128px);
+  }
+
+  .beats__title {
+    padding-bottom: var(--space-3);
+  }
+
+  .beat {
+    display: grid;
+    gap: var(--space-1);
+    padding-block: clamp(24px, 4vw, 48px);
+    border-top: 1px solid rgb(var(--hair) / 0.24);
+    transition: opacity 500ms var(--ease-out);
+  }
+
+  :global(.js) .beat:not(.is-lit) {
+    opacity: 0.18;
+  }
+
+  .beat__name {
+    display: block;
+    font-size: clamp(2.5rem, 8.4vw, 8.5rem);
+  }
+
+  .beat__line {
+    font-size: clamp(1.75rem, 3.4vw, 3.25rem);
+    line-height: 1.1;
+  }
+
+  .beats__foot {
+    padding-top: var(--space-4);
+    border-top: 1px solid rgb(var(--hair) / 0.24);
+    font-size: var(--type-lead);
+  }
+
+  @media (min-width: 768px) {
+    .three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--gutter);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .beat {
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: var(--space-6);
+    }
+
+    .beat__line {
+      text-align: right;
+    }
+  }
+
+  @media print {
+    :global(.js) .beat:not(.is-lit) {
+      opacity: 1;
+    }
+  }
+</style>

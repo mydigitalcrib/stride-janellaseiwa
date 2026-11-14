@@ -1,0 +1,47 @@
+---
+// The top of a section: a small friendly line, the headline and a short lead.
+import Headline from './Headline.astro';
+
+export interface Props {
+  kicker?: string;
+  headline: string[];
+  lead?: string;
+  /** Keeps the lead under the headline on desktop too, for a headline that needs the full width. */
+  stacked?: boolean;
+}
+
+const { kicker, headline, lead, stacked = false } = Astro.props;
+---
+
+<header class:list={['head', { 'head--side': lead && !stacked }]} data-reveal="rise">
+  <div>
+    {kicker && <p class="head__kicker soft-label">{kicker}</p>}
+    <Headline lines={headline} />
+  </div>
+  {lead && <p class="head__lead">{lead}</p>}
+</header>
+
+<style>
+  .head {
+    display: grid;
+    gap: var(--space-5);
+  }
+
+  .head__kicker {
+    margin-bottom: var(--space-4);
+  }
+
+  .head__lead {
+    max-width: 34ch;
+    font-size: var(--type-lead);
+    line-height: 1.35;
+  }
+
+  @media (min-width: 1024px) {
+    .head--side {
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 26rem);
+      align-items: end;
+      gap: var(--space-8);
+    }
+  }
+</style>

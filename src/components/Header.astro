@@ -1,0 +1,145 @@
+---
+// The bar along the top. On an issue it also carries that issue's sections (a menu on small screens).
+import Logo from './Logo.astro';
+import { withBase } from '@/lib/issues';
+
+export interface Props {
+  brand: string;
+  sections?: { id: string; label: string; inBar: boolean }[];
+}
+
+const { brand, sections } = Astro.props;
+---
+
+<header class="bar" data-chrome data-backdrop>
+  <a class="bar__logo" href={withBase('/')} aria-label={`${brand}: all issues`}><Logo brand={brand} /></a>
+  {sections && (
+    <>
+      <nav class="bar__nav" aria-label="This issue">
+        {sections.filter((s) => s.inBar).map((s) => <a href={`#${s.id}`} data-nav={s.id}>{s.label}</a>)}
+      </nav>
+      <button class="exp-round bar__menu" type="button" popovertarget="menu" aria-label="Open the menu">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 5h12M2 11h12"></path></svg>
+      </button>
+    </>
+  )}
+</header>
+
+{sections && (
+  <div id="menu" class="menu on-photo" popover data-menu>
+    <div class="menu__top">
+      <a href={withBase('/')} aria-label={`${brand}: all issues`}><Logo brand={brand} /></a>
+      <button class="exp-round" type="button" popovertarget="menu" popovertargetaction="hide" aria-label="Close the menu">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 3 10 10M13 3 3 13"></path></svg>
+      </button>
+    </div>
+    <nav aria-label="This issue (menu)">
+      {sections.map((s) => <a class="menu__link" href={`#${s.id}`}>{s.label}</a>)}
+    </nav>
+    <div class="menu__foot">
+      <a class="exp-pill exp-pill--ghost" href={withBase('/issues/')}>All issues</a>
+      <button class="exp-pill exp-pill--ghost" type="button" data-print>Save as PDF</button>
+    </div>
+  </div>
+)}
+
+<style>
+  .bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+    height: var(--header-h);
+    padding-inline: var(--margin);
+    background: rgb(var(--backdrop, var(--tone-surface)) / 0.86);
+    color: rgb(var(--ink));
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .bar__logo {
+    flex: none;
+  }
+
+  .bar__nav {
+    display: none;
+  }
+
+  .menu {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0 var(--margin) var(--space-6);
+    border: 0;
+    background: var(--navy-900);
+    color: rgb(var(--ink));
+    overflow-y: auto;
+  }
+
+  .menu:popover-open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-h);
+    flex: none;
+  }
+
+  .menu nav {
+    display: flex;
+    flex-direction: column;
+    margin-block: auto;
+  }
+
+  .menu__link {
+    padding-block: var(--space-3);
+    border-top: 1px solid rgb(var(--hair) / 0.18);
+    font-family: var(--font-display);
+    font-size: clamp(1.625rem, 7.4vw, 2.75rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+
+  .menu__foot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+
+  @media (min-width: 1024px) {
+    .bar__nav {
+      display: flex;
+      gap: clamp(16px, 2.4vw, 36px);
+    }
+
+    .bar__nav a {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: rgb(var(--ink) / 0.72);
+      white-space: nowrap;
+      transition: color 300ms var(--ease-out);
+    }
+
+    .bar__nav a:hover,
+    .bar__nav a[aria-current='true'] {
+      color: rgb(var(--ink));
+    }
+
+    .bar__menu {
+      display: none;
+    }
+  }
+</style>

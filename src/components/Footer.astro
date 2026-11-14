@@ -1,0 +1,57 @@
+---
+import Logo from './Logo.astro';
+import { withBase } from '@/lib/issues';
+
+export interface Props {
+  brand: string;
+  /** The first line: who it's for, and the request to keep the link private. */
+  note: string;
+  /** The second line: which issue this is. */
+  line?: string;
+}
+
+const { brand, note, line } = Astro.props;
+---
+
+<footer class="footer" data-tone="social" data-look="deep">
+  <div class="container footer__in">
+    <a class="footer__logo" href={withBase('/')} aria-label={`${brand}: all issues`}><Logo brand={brand} /></a>
+    <p class="footer__line">{note}{line && <><br />{line}</>}</p>
+    <a class="footer__top" href="#main" data-no-print>Back to top ↑</a>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    padding-block: var(--space-8);
+    color: rgb(var(--ink));
+  }
+
+  .footer__in {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .footer__logo :global(.logo) {
+    height: 56px;
+  }
+
+  .footer__line {
+    font-size: var(--type-small);
+    color: rgb(var(--ink) / 0.8);
+  }
+
+  .footer__top {
+    justify-self: start;
+    font-size: var(--type-small);
+    font-weight: 600;
+  }
+
+  @media (min-width: 1024px) {
+    .footer__in {
+      grid-template-columns: auto 1fr auto;
+      align-items: end;
+      gap: var(--space-8);
+    }
+  }
+</style>

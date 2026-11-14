@@ -1,0 +1,92 @@
+# Words used on every page and in every issue.
+#
+# Change a word here and it changes everywhere. An issue can use different words for itself (for another audience,
+# say) with its own `labels:` block: it only needs the lines it changes. See README.md, "Use different words".
+#
+# {count} is filled in with a number when the page is built, for example "All {count}" becomes "All 12".
+
+site:
+  # Shown on the logo, in the browser tab and at the top of the home page.
+  brand: Stride Social
+  reportName: Weekly Trend Report
+  department: Stride Talent
+
+  # Who the reports are for, on every cover and in the footer. An issue can set its own `audience:`.
+  audience: Just for Stride Talent creators
+  # Follows the audience line in the footer.
+  keepPrivate: Please keep this link to yourself.
+
+  # The line under the headline on the home page, if the latest issue doesn't set its own `homeLine:`.
+  homeLine: What creators are talking about, and what you can film this week.
+
+  labels:
+    # The links in the bar at the top of an issue and in its menu.
+    nav:
+      week: This week
+      try: Five to try
+      talking: What they’re saying # each issue usually sets its own with `talking.nav`
+      ideas: "{count} ideas"
+      sound: Sound and brands
+      challenge: The challenge
+      originals: The originals
+
+    home:
+      readLatest: Read this week’s issue
+      past: Past issues
+      seeAll: See all {count} issues
+
+    archive:
+      title: All issues
+      kicker: The archive
+      headline:
+        - Every issue,
+        - "*in one place.*"
+      lead: "{count} issues so far, newest first."
+      oneLead: The first issue. New ones will appear here every week.
+      filterBy: Show issues about
+      all: Everything
+
+    cover:
+      figuresUnchecked: "Preview: the numbers on this page still need checking against the research."
+      draft: "Draft: you’re previewing this on your computer. It isn’t in the finished site until `draft` is set to false."
+
+    week:
+      tryThis: Try this
+
+    five:
+      what: What’s going on
+      careful: A little care
+      hook: Your hook
+      ways: Or try
+      brands: Could suit
+      copy: Copy this idea
+      copied: Copied. Go make it yours.
+
+    ideas:
+      filterBy: Show ideas for
+      all: All {count}
+      saved: My saved ideas
+      saveThis: "Save this idea:"
+      hook: Your hook
+      shots: How to film it
+      caption: Caption
+      brands: Could suit
+      copy: Copy this idea
+      copied: Idea copied. Happy filming.
+      save: Save it
+      isSaved: Saved
+      emptyTitle: Nothing saved yet.
+      emptyBody: Tap the star on any idea to keep it here.
+      showAll: Show all ideas
+      filming: Filming tips
+      careful: A little care
+      download: Download my saved ideas
+
+    challenge:
+      caption: Your caption
+      copy: Copy the challenge
+      copied: Challenge copied. You’ve got this.
+      more: See more ideas
+
+    originals:
+      pdf: Save this issue as a PDF

@@ -1,0 +1,93 @@
+---
+// Every page: Stride Social's look, and the things that keep a hidden link hidden. No analytics, no outside fonts
+// or scripts, no share preview, nothing for search engines: no third party ever sees this site's address.
+import '@/styles/index.css';
+import Ambient from '@/components/Ambient.astro';
+import Footer from '@/components/Footer.astro';
+import Header from '@/components/Header.astro';
+import { withBase } from '@/lib/issues';
+
+export interface Props {
+  title: string;
+  /** The logo's name, from settings.yaml. */
+  brand: string;
+  sections?: { id: string; label: string; inBar: boolean }[];
+  /** The footer's first line: who it's for, and the request to keep the link private. */
+  footerNote: string;
+  footerLine?: string;
+}
+
+const { title, brand, sections, footerNote, footerLine } = Astro.props;
+
+// The page may only load its own files: no outside scripts, nothing it can send data to. Also in public/_headers,
+// which is stronger but only works on hosts that read it, so this keeps the protection on any host. Off in
+// development, where the dev server needs inline scripts and a live connection.
+const csp = "default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'";
+---
+
+<!doctype html>
+<html lang="en" data-division="social" data-look="ice" data-ink="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {import.meta.env.PROD && <meta http-equiv="Content-Security-Policy" content={csp} />}
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="theme-color" content="#cfedf8" />
+    <title>{title}</title>
+    <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
+    <script is:inline src={withBase('/early.js')}></script>
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true" data-backdrop><Ambient /></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header brand={brand} sections={sections} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer brand={brand} note={footerNote} line={footerLine} />
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+    <script>
+      import '@/scripts/site';
+    </script>
+  </body>
+</html>
+
+<style>
+  /* The one background behind the whole page; its own layer, so changing colour redraws nothing else. */
+  .backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    background: rgb(var(--backdrop, var(--tone-surface)));
+    transform: translateZ(0);
+    pointer-events: none;
+  }
+
+  .toast {
+    position: fixed;
+    left: 50%;
+    bottom: var(--space-5);
+    z-index: 60;
+    max-width: calc(100vw - 2 * var(--margin));
+    padding: var(--space-3) var(--space-5);
+    border-radius: 999px;
+    background: var(--navy-900);
+    color: var(--ice);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0;
+    transform: translate(-50%, 12px);
+    pointer-events: none;
+    transition:
+      opacity 250ms var(--ease-out),
+      transform 250ms var(--ease-out);
+  }
+
+  .toast:global(.is-showing) {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+</style>

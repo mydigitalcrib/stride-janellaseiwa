@@ -1,0 +1,328 @@
+---
+// Twelve ideas. On desktop the titles run down the left and the chosen one stays beside them while the list scrolls;
+// on smaller screens each opens under its title. Same markup: CSS moves it (display: contents).
+// Behaviour: scripts/issue.ts (initIdeas).
+import SectionHead from '@/components/SectionHead.astro';
+import { fill, ideaBrief, issueNo, type IssueData, type Labels } from '@/lib/issues';
+
+export interface Props {
+  data: IssueData;
+  t: Labels;
+}
+
+const { data, t } = Astro.props;
+const { ideas } = data;
+---
+
+<section id="ideas" class="section" data-tone="social" data-look="pale" data-ideas data-issue={issueNo(data)}>
+  <div class="container">
+    <SectionHead kicker={ideas.kicker} headline={ideas.headline} lead={ideas.lead} />
+
+    <div class="tools" data-no-print>
+      <div class="tools__chips" role="group" aria-label={t.ideas.filterBy}>
+        <button class="exp-chip" type="button" data-segment-filter="all" aria-pressed="true">{fill(t.ideas.all, { count: ideas.items.length })}</button>
+        {ideas.segments.map((s) => (
+          <button class="exp-chip" type="button" data-segment-filter={s.id} aria-pressed="false">{s.label}</button>
+        ))}
+      </div>
+      <button class="exp-chip" type="button" data-ideas-saved aria-pressed="false"><span>{t.ideas.saved} (<span data-saved-count>0</span>)</span></button>
+    </div>
+
+    <div class="list">
+      {ideas.items.map((idea) => (
+        <article class="idea" data-idea data-id={idea.id} data-segment={idea.segment}>
+          <div class="idea__row">
+            <button class="idea__head" type="button" aria-expanded="false" aria-controls={`idea-${idea.id}`} data-idea-toggle>
+              <span class="item-title idea__title">{idea.title}</span>
+              <span class="idea__meta">{idea.format} · {idea.time} · {idea.level}</span>
+            </button>
+            <button class="idea__star" type="button" data-save={idea.id} aria-pressed="false" aria-label={`${t.ideas.saveThis} ${idea.title}`} data-no-print>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 17l-5.4 3 1.2-6-4.5-4.2 6.1-.7L12 3.5Z"></path></svg>
+            </button>
+          </div>
+          <div class="idea__open fold" id={`idea-${idea.id}`}>
+            <div>
+              <div class="brief">
+                <p class="brief__stage">{idea.stage}</p>
+                <p class="soft-label">{t.ideas.hook}</p>
+                <p class="brief__hook type-serif">“{idea.hook}”</p>
+                <p class="soft-label">{t.ideas.shots}</p>
+                <ol>{idea.shots.map((s) => <li>{s}</li>)}</ol>
+                {idea.caption && (
+                  <>
+                    <p class="soft-label">{t.ideas.caption}</p>
+                    <p>{idea.caption}</p>
+                  </>
+                )}
+                {idea.brands && (
+                  <>
+                    <p class="soft-label">{t.ideas.brands}</p>
+                    <p>{idea.brands}</p>
+                  </>
+                )}
+                <div class="brief__actions" data-no-print>
+                  <button class="exp-pill" type="button" data-copy={ideaBrief(data, idea, t)} data-copied={t.ideas.copied}>{t.ideas.copy}</button>
+                  <button class="exp-pill exp-pill--ghost" type="button" data-save={idea.id} aria-pressed="false">
+                    <span class="keep-off">{t.ideas.save}</span><span class="keep-on">{t.ideas.isSaved}</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      ))}
+      <div class="empty" data-ideas-empty hidden>
+        <p class="empty__title type-serif">{t.ideas.emptyTitle}</p>
+        <p>{t.ideas.emptyBody}</p>
+        <button class="exp-pill exp-pill--ghost" type="button" data-ideas-reset>{t.ideas.showAll}</button>
+      </div>
+    </div>
+
+    <p class="visually-hidden" data-ideas-count role="status"></p>
+
+    <div class="foot">
+      <div class="foot__tips">
+        <div>
+          <p class="soft-label">{t.ideas.filming}</p>
+          <p>{ideas.filming}</p>
+        </div>
+        <div>
+          <p class="soft-label">{t.ideas.careful}</p>
+          <p>{ideas.careful}</p>
+        </div>
+      </div>
+      <button class="exp-pill exp-pill--ghost" type="button" data-ideas-export data-no-print>{t.ideas.download}</button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-top: clamp(40px, 6vw, 72px);
+  }
+
+  .tools__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .list {
+    margin-top: var(--space-5);
+    border-bottom: 1px solid rgb(var(--hair) / 0.24);
+  }
+
+  .idea__row {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    border-top: 1px solid rgb(var(--hair) / 0.24);
+  }
+
+  .idea__head {
+    display: grid;
+    flex: 1;
+    min-width: 0;
+    gap: var(--space-1);
+    padding-block: var(--space-4);
+    text-align: left;
+  }
+
+  .idea__title {
+    font-size: clamp(1.5rem, 2.3vw, 2.125rem);
+    transition: translate 400ms var(--ease-out);
+  }
+
+  .idea__meta {
+    font-size: var(--type-small);
+    color: rgb(var(--ink) / 0.74);
+  }
+
+  .idea__star {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 44px;
+    height: 44px;
+    margin-top: var(--space-2);
+  }
+
+  .idea__star svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.4;
+    stroke-linejoin: round;
+    transition: fill 250ms var(--ease-out);
+  }
+
+  .idea__star[aria-pressed='true'] svg {
+    fill: currentColor;
+  }
+
+  .brief {
+    padding-bottom: var(--space-6);
+  }
+
+  .brief p {
+    max-width: 48ch;
+  }
+
+  .brief .soft-label {
+    margin-top: var(--space-5);
+    margin-bottom: var(--space-2);
+  }
+
+  .brief__stage {
+    font-size: var(--type-small);
+    color: rgb(var(--ink) / 0.74);
+  }
+
+  .brief__hook {
+    font-size: clamp(2.125rem, 3.2vw, 3rem);
+    line-height: 1.06;
+  }
+
+  .brief ol {
+    margin: 0;
+    padding-left: 1.3em;
+  }
+
+  .brief li + li {
+    margin-top: var(--space-2);
+  }
+
+  .brief__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: var(--space-5);
+  }
+
+  [data-save] .keep-on,
+  [data-save][aria-pressed='true'] .keep-off {
+    display: none;
+  }
+
+  [data-save][aria-pressed='true'] .keep-on {
+    display: inline;
+  }
+
+  .empty {
+    display: grid;
+    justify-items: start;
+    gap: var(--space-3);
+    padding-block: var(--space-7);
+    border-top: 1px solid rgb(var(--hair) / 0.24);
+  }
+
+  .empty__title {
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    line-height: 1;
+  }
+
+  .foot {
+    display: grid;
+    justify-items: start;
+    gap: var(--space-5);
+    margin-top: var(--space-6);
+  }
+
+  .foot__tips {
+    display: grid;
+    gap: var(--space-5);
+  }
+
+  .foot__tips .soft-label {
+    margin-bottom: var(--space-2);
+  }
+
+  .foot__tips p:not(.soft-label) {
+    max-width: 52ch;
+  }
+
+  @media (min-width: 768px) {
+    .foot__tips {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--gutter);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :global(.js) .list {
+      display: grid;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      grid-auto-rows: min-content;
+      column-gap: var(--space-8);
+    }
+
+    :global(.js) .idea {
+      display: contents;
+    }
+
+    :global(.js) .idea__row,
+    :global(.js) .empty {
+      grid-column: 1;
+    }
+
+    /* Every idea's details share one tall cell beside the list, and the open one rides along with the scroll. */
+    :global(.js) .idea__open {
+      display: none;
+      grid-column: 2;
+      grid-row: 1 / span 40;
+      align-self: start;
+      position: sticky;
+      top: calc(var(--header-h) + var(--space-4));
+    }
+
+    :global(.js) .idea.is-open .idea__open {
+      display: block;
+      visibility: visible;
+    }
+
+    :global(.js) .idea.is-open .idea__title {
+      translate: 14px 0;
+    }
+
+    .brief {
+      max-height: calc(100svh - var(--header-h) - var(--space-6));
+      overflow-y: auto;
+      padding-top: var(--space-4);
+      padding-right: var(--space-2);
+    }
+  }
+
+  @media (hover: hover) and (min-width: 1024px) {
+    .idea__head:hover .idea__title {
+      translate: 14px 0;
+    }
+  }
+
+  @media print {
+    :global(.js) .list {
+      display: block;
+    }
+
+    :global(.js) .idea {
+      display: block;
+      break-inside: avoid;
+    }
+
+    :global(.js) .idea__open {
+      display: block;
+      position: static;
+      visibility: visible;
+    }
+
+    .brief {
+      max-height: none;
+      overflow: visible;
+    }
+  }
+</style>

@@ -1,0 +1,203 @@
+/* The shared pieces, from the Stride website's src/styles/system/glass.css, made easier to read: this site is for
+   moms reading on their phones, so big headlines stay wide and uppercase, and everything smaller is sentence case.
+   Colours come from the live tokens, so they work on any part of the scroll. */
+
+/* A small heading in plain words: "Your hook", "How to film it". */
+.soft-label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: rgb(var(--ink) / 0.76);
+}
+
+/* The title of one thing in a list. */
+.item-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.012em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.exp-title {
+  font-family: var(--font-display);
+  font-weight: 850;
+  font-stretch: var(--stretch-wide);
+  font-size: var(--type-display);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.type-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.exp-title .type-serif {
+  font-size: 1.14em;
+  line-height: 0.8;
+}
+
+.exp-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  min-height: 48px;
+  padding: 8px var(--space-5);
+  border-radius: 999px;
+  background: rgb(var(--press));
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: rgb(var(--press-on));
+  transition:
+    background-color 300ms var(--ease-out),
+    color 300ms var(--ease-out);
+}
+
+.exp-pill:hover {
+  background: rgb(var(--press-hover));
+}
+
+.exp-pill svg {
+  flex: none;
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.exp-pill--ghost {
+  background: rgb(255 255 255 / calc(0.05 * var(--fill-k)));
+  box-shadow: inset 0 0 0 1px rgb(var(--hair) / 0.34);
+  color: rgb(var(--ink));
+}
+
+.exp-pill--ghost:hover,
+.exp-pill--ghost[aria-pressed='true'] {
+  background: rgb(var(--press));
+  color: rgb(var(--press-on));
+}
+
+.exp-round {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / calc(0.05 * var(--fill-k)));
+  box-shadow: inset 0 0 0 1px rgb(var(--hair) / 0.34);
+  color: rgb(var(--ink));
+  transition:
+    background-color 400ms var(--ease-out),
+    color 400ms var(--ease-out);
+}
+
+.exp-round:hover {
+  background: rgb(var(--press));
+  color: rgb(var(--press-on));
+}
+
+.exp-round svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* The small filter pills. */
+.exp-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: 4px var(--space-4);
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgb(var(--hair) / 0.26);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: rgb(var(--ink) / 0.9);
+  transition:
+    background-color 300ms var(--ease-out),
+    color 300ms var(--ease-out);
+}
+
+.exp-chip:hover {
+  color: rgb(var(--ink));
+  background: rgb(255 255 255 / calc(0.08 * var(--fill-k)));
+}
+
+.exp-chip[aria-pressed='true'] {
+  background: rgb(var(--press));
+  color: rgb(var(--press-on));
+}
+
+/* Something that opens in place: the .fold inside an .is-open. Open for everyone if the scripts never run. */
+.js .fold {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition:
+    grid-template-rows 450ms var(--ease-out),
+    visibility 0s linear 450ms;
+}
+
+.js .is-open > .fold {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.fold > * {
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* An underlined link, opening somewhere else. */
+.out-link {
+  text-decoration: underline;
+  text-decoration-color: rgb(var(--ink) / 0.35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: text-decoration-color 300ms var(--ease-out);
+}
+
+.out-link:hover {
+  text-decoration-color: rgb(var(--ink));
+}
+
+/* The real-cursor arrow from the Stride website (desktop with a mouse only). */
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
+  html,
+  html * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='n' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230c2753'/%3E%3Cstop offset='.55' stop-color='%2306142b'/%3E%3C/linearGradient%3E%3Cfilter id='s' x='-30%25' y='-30%25' width='160%25' height='160%25'%3E%3CfeDropShadow dx='0' dy='1.400' stdDeviation='1.300' flood-color='%2306142b' flood-opacity='.45'/%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M3.4 2.800 25.300 11.500c1.700.7 1.600 3.100-.2 3.500l-8.500 2.200c-.6.2-1 .6-1.200 1.200l-2.200 8.500c-.4 1.800-2.800 1.900-3.500.2L2.800 3.400c-.2-.5.1-.8.6-.6Z' fill='url(%23n)' stroke='%23ffffff' stroke-width='1.300' stroke-linejoin='round' filter='url(%23s)'/%3E%3Cpath d='M6.200 6.200 18.500 11' stroke='rgba(207,237,248,.5)' stroke-width='1.100' stroke-linecap='round' fill='none'/%3E%3C/svg%3E") 3 3, auto !important;
+  }
+
+  html a,
+  html a *,
+  html button,
+  html button *,
+  html label,
+  html summary,
+  html summary * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='n' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230c2753'/%3E%3Cstop offset='.55' stop-color='%2306142b'/%3E%3C/linearGradient%3E%3Cfilter id='s' x='-30%25' y='-30%25' width='160%25' height='160%25'%3E%3CfeDropShadow dx='0' dy='1.400' stdDeviation='1.300' flood-color='%2306142b' flood-opacity='.45'/%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M3.4 2.800 25.300 11.500c1.700.7 1.600 3.100-.2 3.500l-8.500 2.200c-.6.2-1 .6-1.200 1.200l-2.200 8.500c-.4 1.800-2.800 1.900-3.500.2L2.800 3.400c-.2-.5.1-.8.6-.6Z' fill='url(%23n)' stroke='%23cfedf8' stroke-width='2' stroke-linejoin='round' filter='url(%23s)'/%3E%3Cpath d='M6.200 6.200 18.500 11' stroke='rgba(255,255,255,.85)' stroke-width='1.100' stroke-linecap='round' fill='none'/%3E%3C/svg%3E") 3 3, pointer !important;
+  }
+
+  html input {
+    cursor: text !important;
+  }
+}

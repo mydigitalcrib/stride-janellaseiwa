@@ -1,0 +1,97 @@
+---
+import SectionHead from '@/components/SectionHead.astro';
+import type { IssueData } from '@/lib/issues';
+
+export interface Props {
+  data: IssueData;
+}
+
+const { sound } = Astro.props.data;
+---
+
+<section id="sound" class="section" data-tone="social" data-look="ice">
+  <div class="container">
+    <SectionHead kicker={sound.kicker} headline={sound.headline} lead={sound.lead} stacked />
+
+    <div class="layout">
+      <div class="block" data-reveal="rise">
+        <h3 class="item-title block__title">{sound.insteadTitle}</h3>
+        <ul class="instead" role="list">
+          {sound.instead.map((x) => <li>{x}</li>)}
+        </ul>
+      </div>
+
+      <div class="block" data-reveal="rise">
+        <p class="number">{sound.planning.value}</p>
+        <p class="block__big">{sound.planning.body}</p>
+        <p class="block__small">{sound.planning.note}</p>
+      </div>
+
+      <div class="block" data-reveal="rise">
+        <h3 class="item-title block__title">{sound.brands.title}</h3>
+        <p>{sound.brands.list}</p>
+        <p class="block__line type-serif">{sound.brands.line}</p>
+        <p class="block__small">{sound.brands.note}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .layout {
+    display: grid;
+    gap: var(--space-7);
+    margin-top: clamp(48px, 7vw, 96px);
+  }
+
+  .block {
+    display: grid;
+    align-content: start;
+    gap: var(--space-3);
+    padding-top: var(--space-4);
+    border-top: 1px solid rgb(var(--hair) / 0.24);
+  }
+
+  .block__title {
+    font-size: clamp(1.5rem, 2.3vw, 2.125rem);
+  }
+
+  .instead li {
+    padding-block: var(--space-3);
+    border-bottom: 1px solid rgb(var(--hair) / 0.16);
+  }
+
+  .instead li:last-child {
+    border-bottom: 0;
+  }
+
+  .number {
+    font-family: var(--font-display);
+    font-size: clamp(3.75rem, 6vw, 5.75rem);
+    font-weight: 850;
+    font-stretch: var(--stretch-wide);
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+  }
+
+  .block__big {
+    line-height: 1.45;
+  }
+
+  .block__small {
+    font-size: var(--type-small);
+    color: rgb(var(--ink) / 0.78);
+  }
+
+  .block__line {
+    font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+    line-height: 1.08;
+  }
+
+  @media (min-width: 1024px) {
+    .layout {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--gutter);
+    }
+  }
+</style>

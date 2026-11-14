@@ -1,0 +1,168 @@
+---
+import SectionHead from '@/components/SectionHead.astro';
+import type { IssueData, Labels } from '@/lib/issues';
+
+export interface Props {
+  data: IssueData;
+  t: Labels;
+}
+
+const { data, t } = Astro.props;
+const { challenge } = data;
+---
+
+<section id="challenge" class="section" data-tone="social" data-look="navy">
+  <div class="container">
+    <SectionHead kicker={challenge.kicker} headline={challenge.headline} />
+    <p class="body">{challenge.body}</p>
+
+    <ol class="steps" role="list">
+      {challenge.steps.map((s, i) => (
+        <li class="step" data-reveal="rise" style={`--reveal-delay: ${i * 90}ms`}>
+          <span class="step__no" aria-hidden="true">{i + 1}</span>
+          <span class="step__text">{s}</span>
+        </li>
+      ))}
+    </ol>
+
+    <div class="versions" data-reveal="rise">
+      <h3 class="item-title versions__title">{challenge.versionsTitle}</h3>
+      <ul role="list">
+        {challenge.versions.map((v) => (
+          <li class="version">
+            <span class="version__who">{v.who}</span>
+            <span class="version__line type-serif">{v.line}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="yours" data-reveal="rise">
+      <p class="soft-label">{t.challenge.caption}</p>
+      <p class="yours__line type-serif">{challenge.caption}</p>
+      <p class="yours__when">{challenge.when}</p>
+      <p class="yours__check">{challenge.check}</p>
+    </div>
+
+    <div class="actions" data-no-print>
+      <button class="exp-pill" type="button" data-copy={challenge.brief} data-copied={t.challenge.copied}>{t.challenge.copy}</button>
+      <a class="exp-pill exp-pill--ghost" href="#ideas">{t.challenge.more}</a>
+    </div>
+
+    <p class="closer type-serif">{challenge.closer}</p>
+  </div>
+</section>
+
+<style>
+  .body {
+    max-width: 46ch;
+    margin-top: var(--space-6);
+    font-size: var(--type-lead);
+    line-height: 1.4;
+  }
+
+  .step__no {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 4vw, 3.75rem);
+    font-weight: 850;
+    font-stretch: var(--stretch-wide);
+    line-height: 1;
+    color: rgb(var(--tone-lit));
+  }
+
+  .steps {
+    display: grid;
+    gap: var(--space-5);
+    margin-top: var(--space-7);
+  }
+
+  .step {
+    display: grid;
+    gap: var(--space-2);
+    padding-top: var(--space-3);
+    border-top: 1px solid rgb(var(--hair) / 0.3);
+  }
+
+  .step__text {
+    font-size: var(--type-lead);
+    line-height: 1.3;
+  }
+
+  .versions {
+    margin-top: clamp(56px, 8vw, 104px);
+  }
+
+  .versions__title {
+    margin-bottom: var(--space-3);
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+  }
+
+  .version {
+    display: grid;
+    gap: var(--space-1);
+    padding-block: var(--space-4);
+    border-top: 1px solid rgb(var(--hair) / 0.3);
+  }
+
+  .version__who {
+    font-size: var(--type-small);
+    color: rgb(var(--ink) / 0.82);
+  }
+
+  .version__line {
+    font-size: clamp(1.75rem, 3.4vw, 3.25rem);
+    line-height: 1.08;
+  }
+
+  .yours {
+    display: grid;
+    gap: var(--space-3);
+    margin-top: clamp(56px, 8vw, 104px);
+  }
+
+  .yours__line {
+    max-width: 30ch;
+    font-size: clamp(2.5rem, 5.6vw, 5.5rem);
+    line-height: 1;
+    text-wrap: balance;
+    color: rgb(var(--tone-lit));
+  }
+
+  .yours__when {
+    margin-top: var(--space-3);
+    font-size: var(--type-lead);
+    line-height: 1.35;
+  }
+
+  .yours__check {
+    max-width: 52ch;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+
+  .closer {
+    margin-top: var(--space-7);
+    font-size: clamp(2rem, 3.6vw, 3.5rem);
+    line-height: 1.05;
+  }
+
+  @media (min-width: 768px) {
+    .steps {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--gutter);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .version {
+      grid-template-columns: 14rem minmax(0, 1fr);
+      align-items: baseline;
+      gap: var(--space-6);
+    }
+  }
+</style>

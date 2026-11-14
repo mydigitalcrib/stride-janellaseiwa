@@ -1,0 +1,7 @@
+/* The Stride website's fonts, minus its mono labels: they read as technical, and this site is for moms. */
+@import '@fontsource-variable/archivo/wdth.css';
+@import '@fontsource-variable/inter/wght.css';
+@import '@fontsource/instrument-serif/400-italic.css';
+@import './tokens.css';
+@import './base.css';
+@import './ui.css';
