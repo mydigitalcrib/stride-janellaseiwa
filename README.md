@@ -6,7 +6,7 @@ changes. Every issue here is written for Janella, in UK English.
 
 This site was made on 14 November 2026 from the Stride weekly report template (`weekly-trend-report/`, in the folder
 above this one), with only Janella's issues in it. Its home on GitHub is
-`github.com/michellesalcedovallenilla-ai/stride-janellaseiwa`, and every new Janella issue goes here.
+`github.com/mydigitalcrib/stride-janellaseiwa`, and every new Janella issue goes here.
 
 ## Open it
 
