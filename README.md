@@ -47,6 +47,10 @@ npm run dev      # preview at http://localhost:4430
    npm run lock-issue -- 002-motherhood-family
    ```
 
+5. Put it online. Commit and push to `main` on GitHub. The **Publish to GitHub Pages** step
+   (`.github/workflows/pages.yml`) builds the site and updates the shareable link by itself, in about a minute. You
+   can watch it in the repository's **Actions** tab.
+
    `lock-issue` saves a copy of the issue as it looks now, so a later change can't alter it by accident: `npm test`
    will warn if it does.
 
@@ -124,8 +128,15 @@ If you publish it one day: keep any repository **private**, never write the live
 first, use a host that reads `_headers` (Netlify or Cloudflare Pages) on a random-looking site name, and never link to
 it from a public page. Don't publish it over the original Stride weekly report site.
 
-A **public** GitHub repository undoes the hidden link: anyone can read every issue there, without the site's
-address. Keep `stride-janellaseiwa` private.
+This site is published with **GitHub Pages** from a **public** repository, so the hidden link is a light lock:
+anyone who finds the repository can read every issue there, and the GitHub Pages address can be worked out from the
+repository's name. The pages still tell search engines not to list them (`<meta name="robots">`), but GitHub Pages
+doesn't read `public/_headers`, and its `robots.txt` isn't at the top of the address, so only the `<meta>` tags in
+`src/layouts/Layout.astro` apply there.
+
+Links inside the site go through `withBase()` in `src/lib/issues.ts`, because a GitHub Pages site lives under
+`/stride-janellaseiwa/`. The publish step sets `SITE_BASE`; on this computer and in the tests it's unset, so the
+pages are exactly as before.
 
 ## Where things live
 
