@@ -1,0 +1,498 @@
+# Issue 003 of Janella's site, written for Janella (@janellaseiwa) to read. Made from the Stride Talent research
+# PDF "Stride_Janella_Weekly_Trends_2026-11-27" (week Fri Nov 20 to Thu Nov 26, checked Nov 27). Every figure here
+# was checked against that PDF. UK spelling.
+#
+# Left out on purpose, as notes for Stride rather than for Janella: the follower count and her other businesses
+# from the creator snapshot, the named brand prospects (and checking campaigns, exclusivity and budgets before
+# outreach), "manager's top 3" wording, the link to the original weekly report site, and her newest Reel, which the
+# research couldn't open. The relationship carousel has two dates (Nov 14 and Nov 20), so it's background.
+# Her series "My Postpartum Exploration Era" is ideas 13 to 16 (this week's new episodes), in its own filter group;
+# the research names no brands for the episodes for her, so they have none.
+# An idea's "time" is how many shots, steps or ideas it uses: the research gives no lengths per idea.
+number: 3
+topic: Motherhood & Family
+start: 2026-11-20
+end: 2026-11-26
+draft: false
+figuresChecked: true
+audience: Just for Janella (@janellaseiwa)
+homeLine: Small habits, big chapters, and what you can film this week.
+
+headline:
+  - Small habits,
+  - big
+  - "*chapters.*"
+lede: This week is about the little rituals that make you feel like you. A habit you enjoy, the laughter in your marriage, a winter day out instead of another parcel, and the next steps of your exploration era.
+cover:
+  quote: “Small things count.”
+  line: This week’s idea in three words, and the caption for your first Reel.
+
+week:
+  kicker: This week in three
+  headline:
+    - Three things
+    - "*worth knowing*"
+  items:
+    - title: Small habits are part of your story
+      body: Your Nov 23 Reel framed small habits as part of your journey. It had 212 likes and 10 comments when we checked on Nov 27, and the comments were warm and encouraging.
+    - title: The laughter in your marriage
+      body: A recent carousel about your relationship had 763 likes and 31 comments, with people loving the laughter between you two. Its date is unclear (Nov 14 or Nov 20), so it’s background rather than this week’s news.
+    - title: Experiences over more stuff
+      body: National Trust’s winter installation at Cliveden opened on Nov 20, a timely reminder that a day out can be the story instead of another parcel.
+  tryThis: One tiny habit you actually enjoy.
+  example:
+    body: Your Nov 23 Reel is the example this week, with 212 likes and 10 warm comments when we checked on Nov 27. The comments suggest the topic is worth testing again, not that it went viral.
+    links:
+      - label: Watch your Nov 23 Reel
+        url: https://www.instagram.com/janellaseiwa/reel/DgGRTREBE4d/
+      - label: See your carousel
+        url: https://www.instagram.com/janellaseiwa/p/Df97bVWgFvv/
+  beats:
+    title: The whole format, in three beats
+    items:
+      - name: The setup
+        line: Show the habit you’re about to enjoy.
+      - name: The real moment
+        line: One imperfect thing that happens along the way.
+      - name: The reflection
+        line: A few honest words on why it matters to you.
+    footer: 25 seconds. End by asking what small ritual they’d choose.
+
+five:
+  kicker: Worth your time
+  headline:
+    - Five things
+    - to *try this week*
+  lead: Pick the one that feels most like your week.
+  note: The first one comes from your own Reel, and the second from your own carousel, though its date is unclear. The other three are seasonal prompts from an events listing and two articles, not proof of what your followers want. None of these is a viral trend.
+  items:
+    - title: Small habits, not perfect routines
+      makeItYours: Film one habit you enjoy, from your own point of view.
+      what: Your Nov 23 Reel connected small habits with your journey, and people answered with supportive comments.
+      more: It had 212 likes and 10 comments when we checked on Nov 27. That says the topic is worth testing again, not that it went viral.
+      hook: One tiny thing I do for myself.
+      ways:
+        - “My routine is not aesthetic every day.”
+        - “Small habits, real life.”
+        - “One tiny habit I actually look forward to.” The setup, the interruption, then your reflection.
+      careful: Share what works for you, not parenting advice.
+      brands: Stationery, home
+      links:
+        - label: Watch your Reel
+          url: https://www.instagram.com/janellaseiwa/reel/DgGRTREBE4d/
+    - title: Marriage in the little moments
+      makeItYours: Ask your partner one lighthearted question, and share only the answers you both approve.
+      what: A recent carousel about your relationship drew 763 likes and 31 comments, with people praising the laughter between you.
+      more: Its date is unclear (Nov 14 or Nov 20), so treat it as background. It fits the warm couple stories you already tell.
+      hook: The thing we still laugh about.
+      ways:
+        - “Our very unofficial marriage rule.”
+        - “One question, two answers.”
+        - “We answered separately and this happened.” Agree the question, record both answers, edit in the reactions.
+      careful: Only share what you’ve both agreed to.
+      brands: Lifestyle, homeware
+      links:
+        - label: See your carousel
+          url: https://www.instagram.com/janellaseiwa/p/Df97bVWgFvv/
+    - title: Experiences over more stuff
+      makeItYours: A low-cost winter outing diary, or an at-home version.
+      what: National Trust’s winter installation at Cliveden opened on Nov 20.
+      more: It’s a real UK seasonal example, not a sign of anything going viral. A nearby day out, or a cosy version at home, works just as well.
+      hook: A memory instead of another parcel.
+      ways:
+        - “Our little winter adventure.”
+        - “A day out without the perfect plan.”
+        - Pick a nearby, accessible outing, film the scenery and talk over it.
+      careful: Don’t share where you are while you’re there.
+      brands: Experiences, outerwear
+      links:
+        - label: See the Cliveden listing
+          url: https://www.nationaltrust.org.uk/visit/oxfordshire-buckinghamshire-berkshire/cliveden/events/5f13d8f2-31ee-4a9f-b1b5-8fd692eb201b
+    - title: Intentional holiday spending
+      makeItYours: A personal buy-or-skip list.
+      what: On Nov 25, The Independent covered TUI holiday offers, one sign of the seasonal pressure to spend.
+      more: It’s about the sales, not about what your followers think, so make it personal.
+      hook: Things I am not buying this week.
+      ways:
+        - “My wishlist has a budget.”
+        - “What I would buy again.”
+        - “Buy, skip, keep.” Your own things, why you chose, and ask for tips.
+      careful: Don’t claim a saving unless you’ve checked it.
+      brands: Retail, resale
+      links:
+        - label: Read the article
+          url: https://www.independent.co.uk/deals/tui-discount-code-b2687092.html
+    - title: A cosy night, reimagined
+      makeItYours: A grown-up movie night with your partner.
+      what: Good Housekeeping updated its family film roundup on Nov 20, a timely prompt for a cosy night in.
+      more: It’s a US list and says nothing about what people are actually watching. Make it a date night for the two of you.
+      hook: Our very glamorous Friday night.
+      ways:
+        - “Date night, living-room edition.”
+        - “The film we never finished.”
+        - Set up snacks, pick a film, and film your grown-up reactions.
+      careful: Keep it a night for the two of you, not screen time for the baby.
+      brands: Home entertainment
+      links:
+        - label: See the film list
+          url: https://www.goodhousekeeping.com/entertainment/movies/g69998688/best-kids-movies-2026/
+
+talking:
+  nav: What your followers say
+  kicker: Behind the feed
+  headline:
+    - What your audience is
+    - "*actually*"
+    - talking about.
+  lead: What people said under your posts, and three questions worth asking your own followers.
+  questions:
+    - text: You’re doing so well. Keep going.
+      link:
+        label: See your Nov 23 Reel
+        url: https://www.instagram.com/janellaseiwa/reel/DgGRTREBE4d/
+    - text: Those little family details are everything.
+      link:
+        label: See your Nov 23 Reel
+        url: https://www.instagram.com/janellaseiwa/reel/DgGRTREBE4d/
+    - text: The laughter between you two is the best part, and I’m going to try that.
+      link:
+        label: See your carousel
+        url: https://www.instagram.com/janellaseiwa/p/Df97bVWgFvv/
+  turn:
+    title: Ask, don’t guess
+    body: "Put these in a Story poll and let your followers tell you: What tiny habit helps you feel like yourself? What’s your favourite low-cost winter tradition? What hobby would you try if you had an hour?"
+  care: A few comments aren’t your whole audience, so a poll tells you more. Keep your baby’s routines, and where you are, private.
+
+ideas:
+  kicker: Ready to film
+  headline:
+    - Ideas you can
+    - "*actually film*"
+  lead: Twelve ideas from this week, plus the four episodes of your series, My Postpartum Exploration Era, with new activities to try. Tap one to see the hook and how to film it, then save your favourites.
+  filming: Your own voiceover and captions go a long way. Whenever you’d rather not show your baby, details from home, hands or your own point of view work just as well.
+  careful: Keep it kind and true. Share your own experience, not medical or parenting advice, and leave out recovery or productivity targets. Ask before you film family, and keep your routines and where you are private. The series has no deadline.
+  segments:
+    - id: habits
+      label: Small habits
+    - id: couple
+      label: You two
+    - id: winter
+      label: Winter & family
+    - id: creative
+      label: Your creative side
+    - id: series
+      label: Your series
+  items:
+    - id: 1
+      segment: habits
+      stage: For new mums
+      title: Tiny habit diary
+      format: Reel
+      time: 3 shots
+      level: Easy
+      hook: One tiny habit I actually look forward to.
+      shots:
+        - Show the setup.
+        - Catch the interruption.
+        - Finish with a quick reflection.
+      caption: Small things count.
+      brands: Stationery, home
+    - id: 2
+      segment: habits
+      stage: For parents
+      title: Routine versus reality
+      format: Reel
+      time: 3 shots
+      level: Easy
+      hook: My routine on paper vs real life.
+      shots:
+        - Write down the plan.
+        - Film two harmless changes of plan.
+        - End with a laugh.
+      caption: The schedule had other plans.
+      brands: Home organisation
+    - id: 3
+      segment: couple
+      stage: For couples
+      title: One question, two answers
+      format: Reel
+      time: 3 steps
+      level: Easy
+      hook: We answered separately and this happened.
+      shots:
+        - Agree on the question together.
+        - Record your answers separately.
+        - Edit in the reactions.
+      caption: Same house, different answers.
+      brands: Lifestyle
+    - id: 4
+      segment: couple
+      stage: For couples
+      title: Our little marriage ritual
+      format: Carousel
+      time: 3 steps
+      level: Easy
+      hook: One thing we make time for.
+      shots:
+        - Choose a ritual you share.
+        - Photograph the details.
+        - Add a short reflection.
+      caption: Little moments, big love.
+      brands: Homeware
+    - id: 5
+      segment: winter
+      stage: For families
+      title: Winter memory walk
+      format: Mini-vlog
+      time: 3 shots
+      level: A little more effort
+      hook: A memory instead of another parcel.
+      shots:
+        - Choose a nearby, accessible outing.
+        - Film the scenery.
+        - Talk over it.
+      caption: A little winter magic.
+      brands: Experiences, outerwear
+    - id: 6
+      segment: winter
+      stage: For budget-minded parents
+      title: Buy, skip, keep
+      format: Carousel
+      time: 3 steps
+      level: Easy
+      hook: What I am not buying this week.
+      shots:
+        - List your own things.
+        - Explain each choice.
+        - Ask for tips.
+      caption: Less noise, more intention.
+      brands: Retail, resale
+    - id: 7
+      segment: couple
+      stage: For couples
+      title: Living-room date night
+      format: Reel
+      time: 3 shots
+      level: Easy
+      hook: Our very glamorous Friday night.
+      shots:
+        - Set up the snacks.
+        - Choose the film.
+        - Catch your grown-up reactions.
+      caption: Five-star company, sofa seats.
+      brands: Home entertainment
+    - id: 8
+      segment: creative
+      stage: For creative mums
+      title: A handmade keepsake
+      format: Reel
+      time: 3 shots
+      level: A little more effort
+      hook: I made this instead of buying it.
+      shots:
+        - Choose a simple craft.
+        - Film the process.
+        - Reveal the result.
+      caption: Made with love and questionable skill.
+      brands: Craft supplies
+    - id: 9
+      segment: creative
+      stage: For creative entrepreneurs
+      title: My creative hour
+      format: Reel
+      time: 3 shots
+      level: A little more effort
+      hook: My creative brain is still here.
+      shots:
+        - Set a flexible timer.
+        - Make a photo concept.
+        - Show the result.
+      caption: Creating for the joy of it.
+      brands: Photography
+    - id: 10
+      segment: winter
+      stage: For families
+      title: Traditions we choose
+      format: Carousel
+      time: 3 ideas
+      level: Easy
+      hook: What do we want our holidays to feel like?
+      shots:
+        - Talk it through privately first.
+        - Pick three traditions.
+        - Share only the details you’re both happy with.
+      caption: Making traditions our own.
+      brands: Keepsakes
+    - id: 11
+      segment: winter
+      stage: For adult daughters
+      title: A conversation with Mum
+      format: Interview
+      time: 3 steps
+      level: A little more effort
+      hook: One thing I would love to learn from Mum.
+      shots:
+        - Ask for her consent first.
+        - Agree a format that’s accessible for her.
+        - Approve the edit together.
+      caption: A conversation worth keeping.
+      brands: Family storytelling
+    - id: 12
+      segment: habits
+      stage: For your lifestyle audience
+      title: The one-hour adventure
+      format: Reel
+      time: 3 shots
+      level: Easy
+      hook: What would I do with an hour just for me?
+      shots:
+        - Choose something nearby.
+        - Film the anticipation and the result.
+        - Ask your audience what they’d do.
+      caption: Curiosity looks good on me.
+      brands: Local experiences
+    - id: 13
+      segment: series
+      stage: My Postpartum Exploration Era, episode 1
+      title: The thing I never booked
+      format: Reel series
+      time: Episode 1 of 4
+      level: Your pace
+      hook: I have been curious about this for ages, so today I am finally giving it a go.
+      shots:
+        - Choose a low-cost taster, like flower arranging.
+        - Film the decision, your first attempt and your reaction.
+        - "Ask: what have you always wanted to try?"
+      caption: Curiosity finally won.
+    - id: 14
+      segment: series
+      stage: My Postpartum Exploration Era, episode 2
+      title: Beginner, deliberately
+      format: Reel series
+      time: Episode 2 of 4
+      level: Your pace
+      hook: Today I am doing something I am allowed to be bad at.
+      shots:
+        - Try printmaking or a beginner craft at home.
+        - Capture one mistake and one small success.
+        - "Poll: keep going or try another craft?"
+      caption: Not a masterpiece. Definitely a memory.
+    - id: 15
+      segment: series
+      stage: My Postpartum Exploration Era, episode 3
+      title: A little adventure of my own
+      format: Reel series
+      time: Episode 3 of 4
+      level: Your pace
+      hook: I am taking myself somewhere new, just because I want to.
+      shots:
+        - Choose a library exhibition or a café sketch session, and arrange support if you need it.
+        - Don’t share where you are while you’re there.
+        - Ask followers for accessible, affordable ideas.
+      caption: A little time to explore.
+    - id: 16
+      segment: series
+      stage: My Postpartum Exploration Era, episode 4
+      title: What surprised me
+      format: Reel series
+      time: Episode 4 of 4
+      level: Your pace
+      hook: I thought I was trying new hobbies, but I learned something about myself too.
+      shots:
+        - Look back through your clips.
+        - Name one surprise and one activity you’d repeat, sharing only what feels comfortable.
+        - Let followers vote on the next adventure.
+      caption: Still discovering, still growing.
+
+sound:
+  kicker: Sound and brands
+  headline:
+    - No must-use
+    - sound.
+    - "*Your own voice works.*"
+  lead: Your Nov 23 Reel used original audio. We couldn’t verify any trending sound, TikTok or YouTube Shorts breakout, or search increase for Nov 20–26, so use your own voiceover, or music you’re licensed to use.
+  insteadTitle: Make these instead
+  instead:
+    - Captioned conversations with your partner
+    - A short personal diary
+    - A craft reveal
+  planning:
+    value: "212"
+    body: That’s how many likes your Nov 23 small-habits Reel had, with 10 comments, when we checked on Nov 27.
+    note: A sign the topic is worth testing again, not a sign it went viral.
+  brands:
+    title: Brands that fit naturally
+    list: Craft supplies, journals, photo printing for keepsakes, and local experiences.
+    line: Make the product part of the moment, not the moment itself.
+    note: These are natural fits only, not confirmed partners or campaigns.
+
+challenge:
+  kicker: Your challenge this week
+  headline:
+    - One small habit,
+    - "*one honest story.*"
+  body: One Reel about a ritual you genuinely enjoy, with no recovery or productivity goal attached.
+  steps:
+    - Choose a ritual you genuinely enjoy.
+    - "Film three clips: the setup, a real-life interruption and the outcome. Add a short voiceover in your own words."
+    - Post when it suits you, and ask one question.
+  versionsTitle: Our top three for you
+  versions:
+    - who: The small-habit Reel
+      line: “One tiny thing I do for myself.”
+    - who: Start your exploration era
+      line: “Today I am finally giving it a go.”
+    - who: A winter traditions poll
+      line: “What’s your favourite low-cost winter tradition?”
+  caption: “Small things count.”
+  when: Post when it suits you. Look back after 48 hours, and again after a week.
+  check: Look at saves, shares, comments that say something real, and how many people watched to the end. If you can share your Instagram Insights with us, we’ll compare them with your last five similar Reels.
+  closer: No targets. Just something you enjoy.
+  brief: |-
+    One small habit, one honest story
+
+    1. Choose a ritual you genuinely enjoy. No recovery or productivity goal.
+    2. Film three clips: the setup, a real-life interruption and the outcome. Add a short voiceover in your own words.
+    3. Post when it suits you, and ask one question.
+
+    Caption: “Small things count.”
+
+    Then check, after 48 hours and again after a week: saves, shares, comments that say something real, and how many people watched to the end.
+
+    Keep your baby’s routines, and where you are, private.
+
+originals:
+  kicker: The fine print
+  headline:
+    - Want to see
+    - "*the originals?*"
+  notes:
+    - Checked on Nov 27. Like and comment counts will have moved since.
+    - Your recent carousel shows two different dates (Nov 14 and Nov 20), so we treat it as background.
+    - We couldn’t open your newest Reel, TikTok, YouTube or Google Trends this week, and we didn’t find a Reddit thread from this week worth using.
+    - The listings and articles show what’s on, not what your followers think. The series and brand ideas are our own suggestions. Nothing here is medical advice.
+    - None of this promises a post will go viral. Your own take is what makes it work.
+    - This is just for you and Stride Talent, so please keep it between us.
+  groups:
+    - title: Your posts
+      links:
+        - label: Your Instagram profile
+          url: https://www.instagram.com/janellaseiwa/
+        - label: Your small-habits Reel, Nov 23
+          url: https://www.instagram.com/janellaseiwa/reel/DgGRTREBE4d/
+        - label: Your relationship carousel, Nov 14 or 20
+          url: https://www.instagram.com/janellaseiwa/p/Df97bVWgFvv/
+    - title: Days out and ideas
+      links:
+        - label: "National Trust: Cliveden winter installation, from Nov 20"
+          url: https://www.nationaltrust.org.uk/visit/oxfordshire-buckinghamshire-berkshire/cliveden/events/5f13d8f2-31ee-4a9f-b1b5-8fd692eb201b
+        - label: "National Trust: Stowe craft workshop, Nov 28–29 and December"
+          url: https://www.nationaltrust.org.uk/visit/oxfordshire-buckinghamshire-berkshire/stowe-gardens/events/b97972d1-51a4-4732-a2e4-a6fde81f719e
+        - label: "The Independent: TUI offers, Nov 25"
+          url: https://www.independent.co.uk/deals/tui-discount-code-b2687092.html
+        - label: "Good Housekeeping: family films, updated Nov 20"
+          url: https://www.goodhousekeeping.com/entertainment/movies/g69998688/best-kids-movies-2026/
+    - title: The conversations
+      links:
+        - label: "r/UKParenting: newborn Christmas presents (older thread)"
+          url: https://www.reddit.com/r/UKParenting/comments/1xswaek/do_you_buy_a_newborn_baby_christmas_presents/
